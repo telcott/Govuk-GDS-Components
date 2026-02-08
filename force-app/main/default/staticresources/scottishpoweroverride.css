@@ -1,0 +1,562 @@
+/**
+ * Scottish Power Brand Override
+ * Overrides GOV.UK Design System colours, fonts, and branding
+ * to align with the ScottishPower / Iberdrola visual identity.
+ *
+ * Colour Mapping:
+ *   GDS Blue (#1d70b8)       -> SP Green (#007F33)
+ *   GDS Dark Blue (#003078)  -> SP Dark Green (#005C27)
+ *   GDS Green (#00703c)      -> SP Green (#007F33)
+ *   GDS Black (#0b0c0c)      -> SP Near-Black (#1A1A1A)
+ *   GDS Focus Yellow (#fd0)  -> SP Amber (#FFB81C)
+ *   GDS Light Grey (#f3f2f1) -> SP Light Grey (#F5F5F5)
+ *   GDS Border (#b1b4b6)     -> SP Border (#CCCCCC)
+ *   GDS Visited (#4c2c92)    -> SP Visited (#4A0E6F)
+ *   Header Background        -> SP Navy (#002F6C)
+ */
+
+/* ==========================================================================
+   FONT OVERRIDE
+   Replace GDS Transport with a clean, modern sans-serif stack
+   ========================================================================== */
+
+.govuk-link,
+.app-prose-scope a,
+.govuk-body,
+.govuk-body-l,
+.govuk-body-m,
+.govuk-body-s,
+.govuk-heading-xl,
+.govuk-heading-l,
+.govuk-heading-m,
+.govuk-heading-s,
+.govuk-caption-xl,
+.govuk-caption-l,
+.govuk-caption-m,
+.govuk-label,
+.govuk-label--l,
+.govuk-label--m,
+.govuk-label--s,
+.govuk-label--xl,
+.govuk-hint,
+.govuk-error-message,
+.govuk-fieldset__legend,
+.govuk-button,
+.govuk-header,
+.govuk-header__link--homepage,
+.govuk-header__link--service-name,
+.govuk-header__product-name,
+.govuk-header__menu-button,
+.govuk-footer,
+.govuk-footer__link,
+.govuk-footer__heading,
+.govuk-table__header,
+.govuk-table__cell,
+.govuk-tabs__tab,
+.govuk-tabs__title,
+.govuk-accordion__section-button,
+.govuk-accordion__section-heading-text,
+.govuk-accordion__section-summary,
+.govuk-details__summary-text,
+.govuk-details__text,
+.govuk-breadcrumbs__link,
+.govuk-back-link,
+.govuk-tag,
+.govuk-phase-banner__content,
+.govuk-notification-banner__heading,
+.govuk-notification-banner__content,
+.govuk-panel__title,
+.govuk-panel__body,
+.govuk-inset-text,
+.govuk-warning-text__text,
+.govuk-summary-list__key,
+.govuk-summary-list__value,
+.govuk-summary-list__actions,
+.govuk-select,
+.govuk-input,
+.govuk-textarea,
+.govuk-radios__label,
+.govuk-checkboxes__label,
+.govuk-date-input__label {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+.app-prose-scope a:link,
+.govuk-link:link {
+  color: #007F33;
+}
+
+.app-prose-scope a:visited,
+.govuk-link:visited {
+  color: #4A0E6F;
+}
+
+.app-prose-scope a:hover,
+.govuk-link:hover {
+  color: #005C27;
+}
+
+.govuk-link--no-visited-state:link,
+.govuk-link--no-visited-state:visited {
+  color: #007F33;
+}
+
+.govuk-link--no-visited-state:hover {
+  color: #005C27;
+}
+
+.app-prose-scope a:focus,
+.govuk-link:focus {
+  color: #1A1A1A;
+  background-color: #FFB81C;
+  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+  box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+}
+
+
+/* ==========================================================================
+   FOCUS STATES (global)
+   ========================================================================== */
+
+.govuk-input:focus,
+.govuk-textarea:focus,
+.govuk-select:focus {
+  outline: 3px solid #FFB81C;
+  outline-offset: 0;
+  -webkit-box-shadow: inset 0 0 0 2px;
+  box-shadow: inset 0 0 0 2px;
+}
+
+.govuk-radios__input:focus + .govuk-radios__label::before {
+  border-color: #1A1A1A;
+  -webkit-box-shadow: 0 0 0 4px #FFB81C;
+  box-shadow: 0 0 0 4px #FFB81C;
+}
+
+.govuk-checkboxes__input:focus + .govuk-checkboxes__label::before {
+  border-color: #1A1A1A;
+  -webkit-box-shadow: 0 0 0 3px #FFB81C;
+  box-shadow: 0 0 0 3px #FFB81C;
+}
+
+.govuk-skip-link:focus {
+  outline: 3px solid #FFB81C;
+  outline-offset: 0;
+  background-color: #FFB81C;
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.govuk-header {
+  background: #002F6C;
+  border-bottom-color: #fff;
+}
+
+.govuk-header__container {
+  border-bottom-color: #007F33;
+}
+
+.govuk-header__container--full-width {
+  border-color: #007F33;
+}
+
+.govuk-header__link:focus {
+  color: #1A1A1A;
+  background-color: #FFB81C;
+  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+  box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+}
+
+.govuk-header__menu-button {
+  color: #fff;
+  border-color: #007F33;
+}
+
+.govuk-header__menu-button:hover {
+  border-color: #fff;
+}
+
+.govuk-header__menu-button:focus {
+  color: #1A1A1A;
+  background-color: #FFB81C;
+  border-color: #FFB81C;
+}
+
+.govuk-header__navigation-item--active a:link,
+.govuk-header__navigation-item--active a:hover,
+.govuk-header__navigation-item--active a:visited {
+  color: #fff;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.govuk-footer {
+  background: #F5F5F5;
+  border-top-color: #CCCCCC;
+  color: #1A1A1A;
+}
+
+.govuk-footer__link:active,
+.govuk-footer__link:hover,
+.govuk-footer__link:link,
+.govuk-footer__link:visited {
+  color: #1A1A1A;
+}
+
+.govuk-footer__link:focus {
+  color: #1A1A1A;
+  background-color: #FFB81C;
+  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+  box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+}
+
+.govuk-footer__section-break {
+  border-bottom-color: #CCCCCC;
+}
+
+.govuk-footer__heading {
+  border-bottom-color: #CCCCCC;
+}
+
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.govuk-button {
+  background-color: #007F33;
+  -webkit-box-shadow: 0 2px 0 #003D15;
+  box-shadow: 0 2px 0 #003D15;
+}
+
+.govuk-button:hover {
+  background-color: #005C27;
+}
+
+.govuk-button:focus {
+  border-color: #FFB81C;
+  -webkit-box-shadow: inset 0 0 0 1px #FFB81C;
+  box-shadow: inset 0 0 0 1px #FFB81C;
+}
+
+.govuk-button:focus:not(:active):not(:hover) {
+  border-color: #FFB81C;
+  color: #1A1A1A;
+  background-color: #FFB81C;
+  -webkit-box-shadow: 0 2px 0 #1A1A1A;
+  box-shadow: 0 2px 0 #1A1A1A;
+}
+
+.govuk-button--disabled:hover,
+.govuk-button[disabled="disabled"]:hover,
+.govuk-button[disabled]:hover {
+  background-color: #007F33;
+}
+
+.govuk-button--disabled:active,
+.govuk-button[disabled="disabled"]:active,
+.govuk-button[disabled]:active {
+  -webkit-box-shadow: 0 2px 0 #003D15;
+  box-shadow: 0 2px 0 #003D15;
+}
+
+.govuk-button--secondary {
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 0 2px 0 #929191;
+  box-shadow: 0 2px 0 #929191;
+}
+
+.govuk-button--secondary:hover {
+  background-color: #E0E0E0;
+}
+
+.govuk-button--secondary:hover[disabled] {
+  background-color: #F5F5F5;
+}
+
+/* Warning button - keep red for accessibility but align shadow */
+.govuk-button--warning {
+  background-color: #D4351C;
+}
+
+/* Start button icon colour */
+.govuk-button--start {
+  background-color: #007F33;
+}
+
+
+/* ==========================================================================
+   TAG
+   ========================================================================== */
+
+.govuk-tag {
+  background-color: #007F33;
+}
+
+.govuk-tag--grey {
+  background-color: #F5F5F5;
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   PHASE BANNER
+   ========================================================================== */
+
+.govuk-phase-banner__content__tag {
+  background-color: #007F33;
+}
+
+
+/* ==========================================================================
+   NOTIFICATION BANNER
+   ========================================================================== */
+
+.govuk-notification-banner {
+  border-color: #007F33;
+}
+
+.govuk-notification-banner__header {
+  background-color: #007F33;
+}
+
+.govuk-notification-banner--success {
+  border-color: #007F33;
+}
+
+.govuk-notification-banner--success .govuk-notification-banner__header {
+  background-color: #007F33;
+}
+
+.govuk-notification-banner__link:link,
+.govuk-notification-banner__link:visited {
+  color: #007F33;
+}
+
+.govuk-notification-banner__link:hover {
+  color: #005C27;
+}
+
+.govuk-notification-banner__link:focus {
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   PANEL (success/confirmation)
+   ========================================================================== */
+
+.govuk-panel--confirmation {
+  background: #007F33;
+}
+
+
+/* ==========================================================================
+   ACCORDION
+   ========================================================================== */
+
+.govuk-accordion__section-button:hover {
+  color: #007F33;
+}
+
+.govuk-accordion__section-header {
+  border-top-color: #CCCCCC;
+}
+
+.govuk-accordion__open-all {
+  color: #007F33;
+}
+
+.govuk-accordion__open-all:hover {
+  color: #005C27;
+}
+
+.govuk-accordion__open-all:focus {
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+.govuk-tabs__tab:link,
+.govuk-tabs__tab:visited {
+  color: #007F33;
+}
+
+.govuk-tabs__tab:hover {
+  color: #005C27;
+}
+
+.govuk-tabs__list-item--selected .govuk-tabs__tab:link,
+.govuk-tabs__list-item--selected .govuk-tabs__tab:visited {
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   DETAILS
+   ========================================================================== */
+
+.govuk-details__summary:hover {
+  color: #007F33;
+}
+
+.govuk-details__summary:focus {
+  outline: 3px solid #FFB81C;
+  background-color: #FFB81C;
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   BREADCRUMBS
+   ========================================================================== */
+
+.govuk-breadcrumbs__link:link {
+  color: #007F33;
+}
+
+.govuk-breadcrumbs__link:hover {
+  color: #005C27;
+}
+
+.govuk-breadcrumbs__link:visited {
+  color: #4A0E6F;
+}
+
+.govuk-breadcrumbs__link:focus {
+  outline: 3px solid #FFB81C;
+  background-color: #FFB81C;
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   BACK LINK
+   ========================================================================== */
+
+.govuk-back-link:link {
+  color: #007F33;
+}
+
+.govuk-back-link:hover {
+  color: #005C27;
+}
+
+.govuk-back-link:visited {
+  color: #4A0E6F;
+}
+
+.govuk-back-link:focus {
+  outline: 3px solid #FFB81C;
+  background-color: #FFB81C;
+  color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   ERROR STYLING
+   Keep red for accessibility, but update focus ring
+   ========================================================================== */
+
+.govuk-error-summary {
+  border-color: #D4351C;
+}
+
+.govuk-error-summary__list a:link,
+.govuk-error-summary__list a:visited {
+  color: #D4351C;
+}
+
+.govuk-error-summary__list a:hover {
+  color: #942514;
+}
+
+.govuk-error-summary__list a:focus {
+  outline: 3px solid #FFB81C;
+  background-color: #FFB81C;
+  color: #1A1A1A;
+}
+
+.govuk-form-group--error {
+  border-left-color: #D4351C;
+}
+
+.govuk-input--error,
+.govuk-textarea--error,
+.govuk-select--error {
+  border-color: #D4351C;
+}
+
+
+/* ==========================================================================
+   SUMMARY LIST / TABLE
+   ========================================================================== */
+
+.govuk-summary-list__row {
+  border-bottom-color: #CCCCCC;
+}
+
+.govuk-summary-list__actions a:link,
+.govuk-summary-list__actions a:visited {
+  color: #007F33;
+}
+
+.govuk-summary-list__actions a:hover {
+  color: #005C27;
+}
+
+.govuk-table__header,
+.govuk-table__cell {
+  border-bottom-color: #CCCCCC;
+}
+
+
+/* ==========================================================================
+   INSET TEXT
+   ========================================================================== */
+
+.govuk-inset-text {
+  border-left-color: #CCCCCC;
+}
+
+
+/* ==========================================================================
+   WARNING TEXT
+   ========================================================================== */
+
+.govuk-warning-text__icon {
+  border-color: #1A1A1A;
+}
+
+
+/* ==========================================================================
+   FILE UPLOAD OVERRIDES (extending uploadUiOverride)
+   ========================================================================== */
+
+.slds-button_neutral,
+.slds-button--neutral {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+button.slds-button.slds-button--neutral.ok.uiButton--default.uiButton--brand.uiButton {
+  background-color: #007F33;
+}
+
+.slds-progress-bar__value {
+  background-color: #007F33;
+}

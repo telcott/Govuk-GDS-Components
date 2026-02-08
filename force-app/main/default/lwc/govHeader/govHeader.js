@@ -2,22 +2,20 @@
  * Component Name: Gov UK Header
  * Derived_From_Frontend_Version:v3.13.1
  * Created by: Simon Cook Updated by Neetesh Jain/Brenda Campbell Jakub Szelagowski
+ * Updated: Scottish Power branding
  **/
 import {LightningElement, api, track} from 'lwc';
 import {NavigationMixin} from "lightning/navigation";
 import communityBasePath from '@salesforce/community/basePath';
-import CROWN_LOGO from '@salesforce/resourceUrl/govuklogotypecrown';
 import getDefaultMenuItems from '@salesforce/apex/GovComponentHelper.getDefaultMenuItems';
 
 export default class GovHeader extends NavigationMixin(LightningElement) {
-    
-    crownLogo = CROWN_LOGO;
 
     // refs #67 proto
     @api headerBannerRole = ''; // deprecated
     @api displayMenu;
-    
-    @api headerLabel = "GOV.UK";
+
+    @api headerLabel = "ScottishPower";
     @api headerURL = "#";
     @api serviceName = "Service Name";
     @api serviceURL = "#";

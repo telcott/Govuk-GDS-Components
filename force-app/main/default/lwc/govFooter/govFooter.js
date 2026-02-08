@@ -2,6 +2,7 @@
  * Component Name: Gov UK Footer
  * Derived_From_Frontend_Version:v3.13.1
  * Created by: Simon Cook Updated by Harshpreet Singh Chhabra/Brenda Campbell
+ * Updated: Scottish Power branding
  **/
 import { LightningElement,track ,api} from 'lwc';
 
@@ -18,7 +19,8 @@ export default class GovFooter extends LightningElement {
     @api metalinkNames = "";
     @api metalinkURL = "";
     @api metalinksRequired = false;
-    @api crownLogoRequired = false;
+    @api crownLogoRequired = false; // kept for backwards compatibility
+    @api copyrightText = "\u00A9 ScottishPower Ltd. All rights reserved.";
 
     // fields to show consolidated data on UI
     @track finalNavData = []; 
