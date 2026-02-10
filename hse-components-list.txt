@@ -1,0 +1,187 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#maincontent"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "H-S-E - homepage" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e13]: Service manual
+      - navigation "H-S-E Main Menu" [ref=e14]:
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - link "Design system" [ref=e19] [cursor=pointer]:
+              - /url: /design-system
+          - listitem [ref=e20]:
+            - link "Content design" [ref=e21] [cursor=pointer]:
+              - /url: /content
+          - listitem [ref=e22]:
+            - link "Accessibility" [ref=e23] [cursor=pointer]:
+              - /url: /accessibility
+  - navigation "Breadcrumb" [ref=e24]:
+    - list [ref=e26]:
+      - listitem [ref=e27]:
+        - link "Home" [ref=e28] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e29]:
+        - link "Design system" [ref=e30] [cursor=pointer]:
+          - /url: /design-system
+  - main [ref=e32]:
+    - generic [ref=e35]:
+      - navigation [ref=e37]:
+        - link "Design system" [ref=e39] [cursor=pointer]:
+          - /url: /design-system
+          - img [ref=e40]
+          - text: Design system
+        - heading "Form elements" [level=2] [ref=e42]
+        - list [ref=e43]:
+          - listitem [ref=e44]:
+            - link "Buttons" [ref=e45] [cursor=pointer]:
+              - /url: /design-system/components/buttons
+          - listitem [ref=e46]:
+            - link "Checkboxes" [ref=e47] [cursor=pointer]:
+              - /url: /design-system/components/checkboxes
+          - listitem [ref=e48]:
+            - link "Date input" [ref=e49] [cursor=pointer]:
+              - /url: /design-system/components/date-input
+          - listitem [ref=e50]:
+            - link "Dropdown select" [ref=e51] [cursor=pointer]:
+              - /url: /design-system/components/dropdown-select
+          - listitem [ref=e52]:
+            - link "Error message" [ref=e53] [cursor=pointer]:
+              - /url: /design-system/components/error-message
+          - listitem [ref=e54]:
+            - link "Error summary" [ref=e55] [cursor=pointer]:
+              - /url: /design-system/components/error-summary
+          - listitem [ref=e56]:
+            - link "Fieldset" [ref=e57] [cursor=pointer]:
+              - /url: /design-system/components/fieldset
+          - listitem [ref=e58]:
+            - link "File upload" [ref=e59] [cursor=pointer]:
+              - /url: /design-system/components/file-upload
+          - listitem [ref=e60]:
+            - link "Hint text" [ref=e61] [cursor=pointer]:
+              - /url: /design-system/components/hint-text
+          - listitem [ref=e62]:
+            - link "Radios" [ref=e63] [cursor=pointer]:
+              - /url: /design-system/components/radios
+          - listitem [ref=e64]:
+            - link "Textarea" [ref=e65] [cursor=pointer]:
+              - /url: /design-system/components/textarea
+          - listitem [ref=e66]:
+            - link "Text input" [ref=e67] [cursor=pointer]:
+              - /url: /design-system/components/text-input
+        - heading "Content presentation" [level=2] [ref=e68]
+        - list [ref=e69]:
+          - listitem [ref=e70]:
+            - link "Care cards" [ref=e71] [cursor=pointer]:
+              - /url: /design-system/components/care-cards
+          - listitem [ref=e72]:
+            - link "Details" [ref=e73] [cursor=pointer]:
+              - /url: /design-system/components/details
+          - listitem [ref=e74]:
+            - link "Do and Don't lists" [ref=e75] [cursor=pointer]:
+              - /url: /design-system/components/do-and-dont-lists
+          - listitem [ref=e76]:
+            - link "Expander" [ref=e77] [cursor=pointer]:
+              - /url: /design-system/components/expander
+          - listitem [ref=e78]:
+            - link "Images" [ref=e79] [cursor=pointer]:
+              - /url: /design-system/components/images
+          - listitem [ref=e80]:
+            - link "Inset text" [ref=e81] [cursor=pointer]:
+              - /url: /design-system/components/inset-text
+          - listitem [ref=e82]:
+            - link "Review date" [ref=e83] [cursor=pointer]:
+              - /url: /design-system/components/review-date
+          - listitem [ref=e84]:
+            - link "Table" [ref=e85] [cursor=pointer]:
+              - /url: /design-system/components/table
+          - listitem [ref=e86]:
+            - link "Warning callout" [ref=e87] [cursor=pointer]:
+              - /url: /design-system/components/warning-callout
+        - heading "Navigation" [level=2] [ref=e88]
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - link "Action link" [ref=e91] [cursor=pointer]:
+              - /url: /design-system/components/action-link
+          - listitem [ref=e92]:
+            - link "Back link" [ref=e93] [cursor=pointer]:
+              - /url: /design-system/components/back-link
+          - listitem [ref=e94]:
+            - link "Breadcrumbs" [ref=e95] [cursor=pointer]:
+              - /url: /design-system/components/breadcrumbs
+          - listitem [ref=e96]:
+            - link "Contents list" [ref=e97] [cursor=pointer]:
+              - /url: /design-system/components/contents-list
+          - listitem [ref=e98]:
+            - link "Curated hub navigation" [ref=e99] [cursor=pointer]:
+              - /url: /design-system/components/curated-hub-navigation
+          - listitem [ref=e100]:
+            - link "Footer" [ref=e101] [cursor=pointer]:
+              - /url: /design-system/components/footer
+          - listitem [ref=e102]:
+            - link "Links list" [ref=e103] [cursor=pointer]:
+              - /url: /design-system/components/links-list
+          - listitem [ref=e104]:
+            - link "List panel" [ref=e105] [cursor=pointer]:
+              - /url: /design-system/components/list-panel
+          - listitem [ref=e106]:
+            - link "Next/previous pagination" [ref=e107] [cursor=pointer]:
+              - /url: /design-system/components/pagination
+          - listitem [ref=e108]:
+            - link "Page link" [ref=e109] [cursor=pointer]:
+              - /url: /design-system/components/page-link
+          - listitem [ref=e110]:
+            - link "Page contents" [ref=e111] [cursor=pointer]:
+              - /url: /design-system/components/page-contents
+          - listitem [ref=e112]:
+            - link "Skip link" [ref=e113] [cursor=pointer]:
+              - /url: /design-system/components/skip-link
+          - listitem [ref=e114]:
+            - link "Transactional header" [ref=e115] [cursor=pointer]:
+              - /url: /design-system/components/transactional-header
+      - generic [ref=e116]:
+        - heading "Design - Components" [level=1] [ref=e117]:
+          - generic [ref=e118]:
+            - text: Design
+            - generic [ref=e119]: "-"
+          - text: Components
+        - paragraph [ref=e120]: Components are reusable elements of the user interface.
+        - paragraph [ref=e121]: "They include components for:"
+        - list [ref=e122]:
+          - listitem [ref=e123]: form elements
+          - listitem [ref=e124]: content presentation
+          - listitem [ref=e125]: navigation
+        - paragraph [ref=e126]:
+          - text: You can use individual components in different patterns and contexts. For example, you can use the
+          - link "text input" [ref=e127] [cursor=pointer]:
+            - /url: /design-system/components/text-input
+          - text: component to ask for a person's name, or a
+          - link "date input" [ref=e128] [cursor=pointer]:
+            - /url: /design-system/components/date-input
+          - text: to ask for their birth date.
+  - contentinfo [ref=e129]:
+    - generic [ref=e131]:
+      - generic:
+        - heading "Support links" [level=2] [ref=e132]
+        - list [ref=e133]:
+          - listitem [ref=e134]:
+            - link "Cookies Statement" [ref=e135] [cursor=pointer]:
+              - /url: /cookies-statement
+          - listitem [ref=e136]:
+            - link "Cookies Settings" [ref=e137] [cursor=pointer]:
+              - /url: /cookies-settings
+          - listitem [ref=e138]:
+            - link "Accessibility Statement" [ref=e139] [cursor=pointer]:
+              - /url: /accessibility-statement
+          - listitem [ref=e140]:
+            - link "Privacy Statement" [ref=e141] [cursor=pointer]:
+              - /url: /privacy-statement
+          - listitem [ref=e142]:
+            - link "Disclaimer" [ref=e143] [cursor=pointer]:
+              - /url: /disclaimer
+          - listitem [ref=e144]:
+            - link "Site map" [ref=e145] [cursor=pointer]:
+              - /url: /site-map
+        - paragraph [ref=e146]: © Health Service Executive

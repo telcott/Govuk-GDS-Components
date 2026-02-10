@@ -1,0 +1,855 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#maincontent"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "H-S-E - homepage" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e13]: Service manual
+      - navigation "H-S-E Main Menu" [ref=e14]:
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - link "Design system" [ref=e19] [cursor=pointer]:
+              - /url: /design-system
+          - listitem [ref=e20]:
+            - link "Content design" [ref=e21] [cursor=pointer]:
+              - /url: /content
+          - listitem [ref=e22]:
+            - link "Accessibility" [ref=e23] [cursor=pointer]:
+              - /url: /accessibility
+  - navigation "Breadcrumb" [ref=e24]:
+    - list [ref=e26]:
+      - listitem [ref=e27]:
+        - link "Home" [ref=e28] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e29]:
+        - link "Design system" [ref=e30] [cursor=pointer]:
+          - /url: /design-system
+      - listitem [ref=e31]:
+        - link "Styles" [ref=e32] [cursor=pointer]:
+          - /url: /design-system/styles
+  - main [ref=e34]:
+    - generic [ref=e37]:
+      - navigation [ref=e39]:
+        - link "Design system" [ref=e41] [cursor=pointer]:
+          - /url: /design-system
+          - img [ref=e42]
+          - text: Design system
+        - heading "Styles navigation" [level=2] [ref=e44]:
+          - text: Styles
+          - generic [ref=e45]: navigation
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "Colour" [disabled]:
+              - /url: /design-system/styles/colour
+          - listitem [ref=e48]:
+            - link "Focus states" [ref=e49] [cursor=pointer]:
+              - /url: /design-system/styles/focus-state
+          - listitem [ref=e50]:
+            - link "Spacing" [ref=e51] [cursor=pointer]:
+              - /url: /design-system/styles/spacing
+          - listitem [ref=e52]:
+            - link "Typography" [ref=e53] [cursor=pointer]:
+              - /url: /design-system/styles/typography
+      - generic [ref=e54]:
+        - heading "Styles - Colour" [level=1] [ref=e55]:
+          - generic [ref=e56]:
+            - text: Styles
+            - generic [ref=e57]: "-"
+          - text: Colour
+        - paragraph [ref=e58]: Our colours, and how to apply them.
+        - heading "Using colour" [level=2] [ref=e59]
+        - paragraph [ref=e60]: Our brand colours help people recognise and trust that our services come from the HSE.
+        - paragraph [ref=e61]: "We also use colour to help users prioritise and differentiate information - for example we use:"
+        - list [ref=e62]:
+          - listitem [ref=e63]: HSE-green-300 for focus states
+          - listitem [ref=e64]: yellow for warning callouts
+          - listitem [ref=e65]: red to communicate urgency or error
+        - heading "Colour contrast" [level=2] [ref=e66]
+        - paragraph [ref=e67]: Our text and background colours are designed to meet accessibility needs. We meet at least level AA for contrast and aim for level AAA as far as possible. Read more about accessibility and colour on this page.
+        - heading "Main colours" [level=2] [ref=e68]
+        - paragraph [ref=e69]:
+          - text: If you are using HSE.IE frontend or the HSE.IE prototype kit, use the
+          - link "Sass variables" [ref=e70] [cursor=pointer]:
+            - /url: https://sass-lang.com/guide#topic-2
+          - text: provided rather than copying the hexadecimal (hex) colour values. For example, use
+          - code [ref=e71]: $hse-text-color
+          - text: rather than
+          - code [ref=e72]: "#212b32"
+          - text: . This means that your service will always use the most recent colour palette whenever you update.
+        - paragraph [ref=e73]:
+          - text: Only use the variables in the context they’re designed for. In all other cases, you should reference the colour palette directly. For example, if you wanted to use red to represent some data in a graph you should use
+          - code [ref=e74]: $color_hse-red
+          - text: rather than
+          - code [ref=e75]: $hse-error-color
+          - text: .
+        - heading "Text" [level=2] [ref=e76]
+        - table "Table of text colours" [ref=e77]:
+          - rowgroup [ref=e78]:
+            - row "Sass text name Sass text code Hex value" [ref=e79]:
+              - columnheader "Sass text name" [ref=e80]
+              - columnheader "Sass text code" [ref=e81]
+              - columnheader "Hex value" [ref=e82]
+          - rowgroup [ref=e83]:
+            - 'row "$hse-text-color $color_hse-grey-900 #212b32" [ref=e84]':
+              - cell "$hse-text-color" [ref=e85]:
+                - code [ref=e87]: $hse-text-color
+              - cell "$color_hse-grey-900" [ref=e88]:
+                - code [ref=e89]: $color_hse-grey-900
+              - cell "#212b32" [ref=e90]:
+                - code [ref=e91]: "#212b32"
+            - 'row "$hse-secondary-text-color $color_hse-grey-700 #455C68" [ref=e92]':
+              - cell "$hse-secondary-text-color" [ref=e93]:
+                - code [ref=e95]: $hse-secondary-text-color
+              - cell "$color_hse-grey-700" [ref=e96]:
+                - code [ref=e97]: $color_hse-grey-700
+              - cell "#455C68" [ref=e98]:
+                - code [ref=e99]: "#455C68"
+        - heading "Links" [level=2] [ref=e100]
+        - table "Table of text colours" [ref=e101]:
+          - rowgroup [ref=e102]:
+            - row "Sass text name Sass text code Hex value" [ref=e103]:
+              - columnheader "Sass text name" [ref=e104]
+              - columnheader "Sass text code" [ref=e105]
+              - columnheader "Hex value" [ref=e106]
+          - rowgroup [ref=e107]:
+            - 'row "$hse-link-color $color_hse-blue #0B55B7" [ref=e108]':
+              - cell "$hse-link-color" [ref=e109]:
+                - code [ref=e111]: $hse-link-color
+              - cell "$color_hse-blue" [ref=e112]:
+                - code [ref=e113]: $color_hse-blue
+              - cell "#0B55B7" [ref=e114]:
+                - code [ref=e115]: "#0B55B7"
+            - 'row "$hse-link-hover-color $color_hse-purple-500 #782CC3" [ref=e116]':
+              - cell "$hse-link-hover-color" [ref=e117]:
+                - code [ref=e119]: $hse-link-hover-color
+              - cell "$color_hse-purple-500" [ref=e120]:
+                - code [ref=e121]: $color_hse-purple-500
+              - cell "#782CC3" [ref=e122]:
+                - code [ref=e123]: "#782CC3"
+            - 'row "$hse-link-visited-color $color_hse-purple-700 #5F3DC4" [ref=e124]':
+              - cell "$hse-link-visited-color" [ref=e125]:
+                - code [ref=e127]: $hse-link-visited-color
+              - cell "$color_hse-purple-700" [ref=e128]:
+                - code [ref=e129]: $color_hse-purple-700
+              - cell "#5F3DC4" [ref=e130]:
+                - code [ref=e131]: "#5F3DC4"
+            - 'row "$hse-link-active-color shade($hse-link-color, 50%) #0B55B780" [ref=e132]':
+              - cell "$hse-link-active-color" [ref=e133]:
+                - code [ref=e135]: $hse-link-active-color
+              - cell "shade($hse-link-color, 50%)" [ref=e136]:
+                - code [ref=e137]: shade($hse-link-color, 50%)
+              - cell "#0B55B780" [ref=e138]:
+                - code [ref=e139]: "#0B55B780"
+        - heading "Focus state" [level=2] [ref=e140]
+        - table "Table of focus colours" [ref=e141]:
+          - rowgroup [ref=e142]:
+            - row "Sass text name Sass text code Hex value" [ref=e143]:
+              - columnheader "Sass text name" [ref=e144]
+              - columnheader "Sass text code" [ref=e145]
+              - columnheader "Hex value" [ref=e146]
+          - rowgroup [ref=e147]:
+            - 'row "$hse-focus-color $color_hse-green-300 #73E6C2" [ref=e148]':
+              - cell "$hse-focus-color" [ref=e149]:
+                - code [ref=e151]: $hse-focus-color
+              - cell "$color_hse-green-300" [ref=e152]:
+                - code [ref=e153]: $color_hse-green-300
+              - cell "#73E6C2" [ref=e154]:
+                - code [ref=e155]: "#73E6C2"
+            - 'row "$hse-focus-text-color $color_hse-grey-900 #212B32" [ref=e156]':
+              - cell "$hse-focus-text-color" [ref=e157]:
+                - code [ref=e159]: $hse-focus-text-color
+              - cell "$color_hse-grey-900" [ref=e160]:
+                - code [ref=e161]: $color_hse-grey-900
+              - cell "#212B32" [ref=e162]:
+                - code [ref=e163]: "#212B32"
+        - heading "Border" [level=2] [ref=e164]
+        - table "Table of border colours" [ref=e165]:
+          - rowgroup [ref=e166]:
+            - row "Sass text name Sass text code Hex value" [ref=e167]:
+              - columnheader "Sass text name" [ref=e168]
+              - columnheader "Sass text code" [ref=e169]
+              - columnheader "Hex value" [ref=e170]
+          - rowgroup [ref=e171]:
+            - 'row "$hse-border-color $color_hse-grey-300 #AEB7BD" [ref=e172]':
+              - cell "$hse-border-color" [ref=e173]:
+                - code [ref=e175]: $hse-border-color
+              - cell "$color_hse-grey-300" [ref=e176]:
+                - code [ref=e177]: $color_hse-grey-300
+              - cell "#AEB7BD" [ref=e178]:
+                - code [ref=e179]: "#AEB7BD"
+            - 'row "$hse-secondary-border-color $color_transparent_hse-white-20 #ffffff33" [ref=e180]':
+              - cell "$hse-secondary-border-color" [ref=e181]:
+                - code [ref=e183]: $hse-secondary-border-color
+              - cell "$color_transparent_hse-white-20" [ref=e184]:
+                - code [ref=e185]: $color_transparent_hse-white-20
+              - cell "#ffffff33" [ref=e186]:
+                - code [ref=e187]: "#ffffff33"
+        - heading "Forms" [level=2] [ref=e188]
+        - table "Table of forms colours" [ref=e189]:
+          - rowgroup [ref=e190]:
+            - row "Sass text name Sass text code Hex value" [ref=e191]:
+              - columnheader "Sass text name" [ref=e192]
+              - columnheader "Sass text code" [ref=e193]
+              - columnheader "Hex value" [ref=e194]
+          - rowgroup [ref=e195]:
+            - 'row "$hse-error-color $color_hse-red-500 #B30638" [ref=e196]':
+              - cell "$hse-error-color" [ref=e197]:
+                - code [ref=e199]: $hse-error-color
+              - cell "$color_hse-red-500" [ref=e200]:
+                - code [ref=e201]: $color_hse-red-500
+              - cell "#B30638" [ref=e202]:
+                - code [ref=e203]: "#B30638"
+            - 'row "$hse-form-border-color $color_hse-grey-700 #455C68" [ref=e204]':
+              - cell "$hse-form-border-color" [ref=e205]:
+                - code [ref=e207]: $hse-form-border-color
+              - cell "$color_hse-grey-700" [ref=e208]:
+                - code [ref=e209]: $color_hse-grey-700
+              - cell "#455C68" [ref=e210]:
+                - code [ref=e211]: "#455C68"
+            - 'row "$hse-form-element-background-color $color_hse-white-0 #FFF" [ref=e212]':
+              - cell "$hse-form-element-background-color" [ref=e213]:
+                - code [ref=e215]: $hse-form-element-background-color
+              - cell "$color_hse-white-0" [ref=e216]:
+                - code [ref=e217]: $color_hse-white-0
+              - cell "#FFF" [ref=e218]:
+                - code [ref=e219]: "#FFF"
+        - heading "Box shadow" [level=2] [ref=e220]
+        - table "Table of box shadow colours" [ref=e221]:
+          - rowgroup [ref=e222]:
+            - row "Sass text name Sass text code Hex value" [ref=e223]:
+              - columnheader "Sass text name" [ref=e224]
+              - columnheader "Sass text code" [ref=e225]
+              - columnheader "Hex value" [ref=e226]
+          - rowgroup [ref=e227]:
+            - 'row "$hse-box-shadow rgba(33, 43, 50, .16) #212b3229" [ref=e228]':
+              - cell "$hse-box-shadow" [ref=e229]:
+                - code [ref=e231]: $hse-box-shadow
+              - cell "rgba(33, 43, 50, .16)" [ref=e232]:
+                - code [ref=e233]: rgba(33, 43, 50, .16)
+              - cell "#212b3229" [ref=e234]:
+                - code [ref=e235]: "#212b3229"
+            - row "$hse-box-shadow-color $color_hse-grey-700-rgb rgb(66, 84, 98)" [ref=e236]:
+              - cell "$hse-box-shadow-color" [ref=e237]:
+                - code [ref=e239]: $hse-box-shadow-color
+              - cell "$color_hse-grey-700-rgb" [ref=e240]:
+                - code [ref=e241]: $color_hse-grey-700-rgb
+              - cell "rgb(66, 84, 98)" [ref=e242]:
+                - code [ref=e243]: rgb(66, 84, 98)
+        - heading "Panel" [level=2] [ref=e244]
+        - table "Table of panel colours" [ref=e245]:
+          - rowgroup [ref=e246]:
+            - row "Sass text name Sass text code Hex value" [ref=e247]:
+              - columnheader "Sass text name" [ref=e248]
+              - columnheader "Sass text code" [ref=e249]
+              - columnheader "Hex value" [ref=e250]
+          - rowgroup [ref=e251]:
+            - 'row "$hse-panel-shadow rgba(0, 0, 0, .1) #0000001a" [ref=e252]':
+              - cell "$hse-panel-shadow" [ref=e253]:
+                - code [ref=e255]: $hse-panel-shadow
+              - cell "rgba(0, 0, 0, .1)" [ref=e256]:
+                - code [ref=e257]: rgba(0, 0, 0, .1)
+              - cell "#0000001a" [ref=e258]:
+                - code [ref=e259]: "#0000001a"
+        - heading "Buttons" [level=2] [ref=e260]
+        - heading "Primary" [level=3] [ref=e261]
+        - table "Table of primaty buttons colours" [ref=e262]:
+          - rowgroup [ref=e263]:
+            - row "Sass text name Sass text code Hex value" [ref=e264]:
+              - columnheader "Sass text name" [ref=e265]
+              - columnheader "Sass text code" [ref=e266]
+              - columnheader "Hex value" [ref=e267]
+          - rowgroup [ref=e268]:
+            - 'row "$hse-button-color $color_hse-purple-700 #5F3DC4" [ref=e269]':
+              - cell "$hse-button-color" [ref=e270]:
+                - code [ref=e272]: $hse-button-color
+              - cell "$color_hse-purple-700" [ref=e273]:
+                - code [ref=e274]: $color_hse-purple-700
+              - cell "#5F3DC4" [ref=e275]:
+                - code [ref=e276]: "#5F3DC4"
+            - 'row "$hse-button-hover-color $color_hse-purple-500 #782CC3" [ref=e277]':
+              - cell "$hse-button-hover-color" [ref=e278]:
+                - code [ref=e280]: $hse-button-hover-color
+              - cell "$color_hse-purple-500" [ref=e281]:
+                - code [ref=e282]: $color_hse-purple-500
+              - cell "#782CC3" [ref=e283]:
+                - code [ref=e284]: "#782CC3"
+            - 'row "$hse-button-hover-shadow 0 4px 15px rgba(0, 0, 0, .2) #00000033" [ref=e285]':
+              - cell "$hse-button-hover-shadow" [ref=e286]:
+                - code [ref=e288]: $hse-button-hover-shadow
+              - cell "0 4px 15px rgba(0, 0, 0, .2)" [ref=e289]:
+                - code [ref=e290]: 0 4px 15px rgba(0, 0, 0, .2)
+              - cell "#00000033" [ref=e291]:
+                - code [ref=e292]: "#00000033"
+            - 'row "$hse-button-disabled-color $color_hse-grey-100 #D8DDE0" [ref=e293]':
+              - cell "$hse-button-disabled-color" [ref=e294]:
+                - code [ref=e296]: $hse-button-disabled-color
+              - cell "$color_hse-grey-100" [ref=e297]:
+                - code [ref=e298]: $color_hse-grey-100
+              - cell "#D8DDE0" [ref=e299]:
+                - code [ref=e300]: "#D8DDE0"
+            - 'row "$hse-button-active-color $color_hse-purple-500 #782CC3" [ref=e301]':
+              - cell "$hse-button-active-color" [ref=e302]:
+                - code [ref=e304]: $hse-button-active-color
+              - cell "$color_hse-purple-500" [ref=e305]:
+                - code [ref=e306]: $color_hse-purple-500
+              - cell "#782CC3" [ref=e307]:
+                - code [ref=e308]: "#782CC3"
+        - heading "Secondary" [level=3] [ref=e309]
+        - table "Table of secondary buttons colours" [ref=e310]:
+          - rowgroup [ref=e311]:
+            - row "Sass text name Sass text code Hex value" [ref=e312]:
+              - columnheader "Sass text name" [ref=e313]
+              - columnheader "Sass text code" [ref=e314]
+              - columnheader "Hex value" [ref=e315]
+          - rowgroup [ref=e316]:
+            - 'row "$hse-secondary-button-border-color $color_hse-purple-700 #5F3DC4" [ref=e317]':
+              - cell "$hse-secondary-button-border-color" [ref=e318]:
+                - code [ref=e320]: $hse-secondary-button-border-color
+              - cell "$color_hse-purple-700" [ref=e321]:
+                - code [ref=e322]: $color_hse-purple-700
+              - cell "#5F3DC4" [ref=e323]:
+                - code [ref=e324]: "#5F3DC4"
+            - 'row "$hse-secondary-button-hover-color $color_hse-purple-500 #782CC3" [ref=e325]':
+              - cell "$hse-secondary-button-hover-color" [ref=e326]:
+                - code [ref=e328]: $hse-secondary-button-hover-color
+              - cell "$color_hse-purple-500" [ref=e329]:
+                - code [ref=e330]: $color_hse-purple-500
+              - cell "#782CC3" [ref=e331]:
+                - code [ref=e332]: "#782CC3"
+            - 'row "$hse-secondary-hover-shadow 0 4px 15px rgba(0, 0, 0, .1) #0000001a" [ref=e333]':
+              - cell "$hse-secondary-hover-shadow" [ref=e334]:
+                - code [ref=e336]: $hse-secondary-hover-shadow
+              - cell "0 4px 15px rgba(0, 0, 0, .1)" [ref=e337]:
+                - code [ref=e338]: 0 4px 15px rgba(0, 0, 0, .1)
+              - cell "#0000001a" [ref=e339]:
+                - code [ref=e340]: "#0000001a"
+            - 'row "$hse-secondary-button-disabled-border-color $color_hse-grey-500 #768692" [ref=e341]':
+              - cell "$hse-secondary-button-disabled-border-color" [ref=e342]:
+                - code [ref=e344]: $hse-secondary-button-disabled-border-color
+              - cell "$color_hse-grey-500" [ref=e345]:
+                - code [ref=e346]: $color_hse-grey-500
+              - cell "#768692" [ref=e347]:
+                - code [ref=e348]: "#768692"
+            - 'row "$hse-secondary-button-active-color rgba($color_hse-purple-500, .2) #768692" [ref=e349]':
+              - cell "$hse-secondary-button-active-color" [ref=e350]:
+                - code [ref=e352]: $hse-secondary-button-active-color
+              - cell "rgba($color_hse-purple-500, .2)" [ref=e353]:
+                - code [ref=e354]: rgba($color_hse-purple-500, .2)
+              - cell "#768692" [ref=e355]:
+                - code [ref=e356]: "#768692"
+        - heading "Text button" [level=3] [ref=e357]
+        - table "Table of secondary buttons colours" [ref=e358]:
+          - rowgroup [ref=e359]:
+            - row "Sass text name Sass text code Hex value" [ref=e360]:
+              - columnheader "Sass text name" [ref=e361]
+              - columnheader "Sass text code" [ref=e362]
+              - columnheader "Hex value" [ref=e363]
+          - rowgroup [ref=e364]:
+            - 'row "$hse-text-button-border-color $color_hse-purple-700 #5F3DC4" [ref=e365]':
+              - cell "$hse-text-button-border-color" [ref=e366]:
+                - code [ref=e368]: $hse-text-button-border-color
+              - cell "$color_hse-purple-700" [ref=e369]:
+                - code [ref=e370]: $color_hse-purple-700
+              - cell "#5F3DC4" [ref=e371]:
+                - code [ref=e372]: "#5F3DC4"
+            - 'row "$hse-text-button-hover-color $color_hse-purple-500 #782CC3" [ref=e373]':
+              - cell "$hse-text-button-hover-color" [ref=e374]:
+                - code [ref=e376]: $hse-text-button-hover-color
+              - cell "$color_hse-purple-500" [ref=e377]:
+                - code [ref=e378]: $color_hse-purple-500
+              - cell "#782CC3" [ref=e379]:
+                - code [ref=e380]: "#782CC3"
+            - 'row "$hse-text-hover-shadow 0 4px 15px rgba(0, 0, 0, .1) #0000001a" [ref=e381]':
+              - cell "$hse-text-hover-shadow" [ref=e382]:
+                - code [ref=e384]: $hse-text-hover-shadow
+              - cell "0 4px 15px rgba(0, 0, 0, .1)" [ref=e385]:
+                - code [ref=e386]: 0 4px 15px rgba(0, 0, 0, .1)
+              - cell "#0000001a" [ref=e387]:
+                - code [ref=e388]: "#0000001a"
+            - 'row "$hse-text-button-active-color rgba($color_hse-purple-500, .2) #5F3DC433" [ref=e389]':
+              - cell "$hse-text-button-active-color" [ref=e390]:
+                - code [ref=e392]: $hse-text-button-active-color
+              - cell "rgba($color_hse-purple-500, .2)" [ref=e393]:
+                - code [ref=e394]: rgba($color_hse-purple-500, .2)
+              - cell "#5F3DC433" [ref=e395]:
+                - code [ref=e396]: "#5F3DC433"
+        - heading "Reverse" [level=3] [ref=e397]
+        - table "Table of secondary buttons colours" [ref=e398]:
+          - rowgroup [ref=e399]:
+            - row "Sass text name Sass text code Hex value" [ref=e400]:
+              - columnheader "Sass text name" [ref=e401]
+              - columnheader "Sass text code" [ref=e402]
+              - columnheader "Hex value" [ref=e403]
+          - rowgroup [ref=e404]:
+            - 'row "$hse-reverse-button-color $color_hse-grey-50 #F3F3F3" [ref=e405]':
+              - cell "$hse-reverse-button-color" [ref=e406]:
+                - code [ref=e408]: $hse-reverse-button-color
+              - cell "$color_hse-grey-50" [ref=e409]:
+                - code [ref=e410]: $color_hse-grey-50
+              - cell "#F3F3F3" [ref=e411]:
+                - code [ref=e412]: "#F3F3F3"
+            - 'row "$hse-reverse-button-hover-color $color_hse-white-0 #FFF" [ref=e413]':
+              - cell "$hse-reverse-button-hover-color" [ref=e414]:
+                - code [ref=e416]: $hse-reverse-button-hover-color
+              - cell "$color_hse-white-0" [ref=e417]:
+                - code [ref=e418]: $color_hse-white-0
+              - cell "#FFF" [ref=e419]:
+                - code [ref=e420]: "#FFF"
+            - 'row "$hse-reverse-button-disabled-color $color_hse-grey-100 #D8DDE0" [ref=e421]':
+              - cell "$hse-reverse-button-disabled-color" [ref=e422]:
+                - code [ref=e424]: $hse-reverse-button-disabled-color
+              - cell "$color_hse-grey-100" [ref=e425]:
+                - code [ref=e426]: $color_hse-grey-100
+              - cell "#D8DDE0" [ref=e427]:
+                - code [ref=e428]: "#D8DDE0"
+            - 'row "$hse-reverse-hover-border-color $color_hse-grey-50 #F3F3F3" [ref=e429]':
+              - cell "$hse-reverse-hover-border-color" [ref=e430]:
+                - code [ref=e432]: $hse-reverse-hover-border-color
+              - cell "$color_hse-grey-50" [ref=e433]:
+                - code [ref=e434]: $color_hse-grey-50
+              - cell "#F3F3F3" [ref=e435]:
+                - code [ref=e436]: "#F3F3F3"
+            - 'row "$hse-reverse-button-active-color $color_hse-grey-50 #F3F3F3" [ref=e437]':
+              - cell "$hse-reverse-button-active-color" [ref=e438]:
+                - code [ref=e440]: $hse-reverse-button-active-color
+              - cell "$color_hse-grey-50" [ref=e441]:
+                - code [ref=e442]: $color_hse-grey-50
+              - cell "#F3F3F3" [ref=e443]:
+                - code [ref=e444]: "#F3F3F3"
+        - heading "Primary button text colour" [level=3] [ref=e445]
+        - table "Table of primary button text colours" [ref=e446]:
+          - rowgroup [ref=e447]:
+            - row "Sass text name Sass text code Hex value" [ref=e448]:
+              - columnheader "Sass text name" [ref=e449]
+              - columnheader "Sass text code" [ref=e450]
+              - columnheader "Hex value" [ref=e451]
+          - rowgroup [ref=e452]:
+            - 'row "$hse-button-text-color $color_hse-white-0 #FFF" [ref=e453]':
+              - cell "$hse-button-text-color" [ref=e454]:
+                - code [ref=e456]: $hse-button-text-color
+              - cell "$color_hse-white-0" [ref=e457]:
+                - code [ref=e458]: $color_hse-white-0
+              - cell "#FFF" [ref=e459]:
+                - code [ref=e460]: "#FFF"
+            - 'row "$hse-button-disabled-text-color $color_hse-grey-500 #768692" [ref=e461]':
+              - cell "$hse-button-disabled-text-color" [ref=e462]:
+                - code [ref=e464]: $hse-button-disabled-text-color
+              - cell "$color_hse-grey-500" [ref=e465]:
+                - code [ref=e466]: $color_hse-grey-500
+              - cell "#768692" [ref=e467]:
+                - code [ref=e468]: "#768692"
+        - heading "Secondary button text colour" [level=3] [ref=e469]
+        - table "Table of secondary button text colours" [ref=e470]:
+          - rowgroup [ref=e471]:
+            - row "Sass text name Sass text code Hex value" [ref=e472]:
+              - columnheader "Sass text name" [ref=e473]
+              - columnheader "Sass text code" [ref=e474]
+              - columnheader "Hex value" [ref=e475]
+          - rowgroup [ref=e476]:
+            - 'row "$hse-secondary-button-text-color $hse-secondary-button-border-color #5F3DC4" [ref=e477]':
+              - cell "$hse-secondary-button-text-color" [ref=e478]:
+                - code [ref=e480]: $hse-secondary-button-text-color
+              - cell "$hse-secondary-button-border-color" [ref=e481]:
+                - code [ref=e482]: $hse-secondary-button-border-color
+              - cell "#5F3DC4" [ref=e483]:
+                - code [ref=e484]: "#5F3DC4"
+            - 'row "$hse-secondary-button-hover-text-color $hse-secondary-button-hover-color #782CC3" [ref=e485]':
+              - cell "$hse-secondary-button-hover-text-color" [ref=e486]:
+                - code [ref=e488]: $hse-secondary-button-hover-text-color
+              - cell "$hse-secondary-button-hover-color" [ref=e489]:
+                - code [ref=e490]: $hse-secondary-button-hover-color
+              - cell "#782CC3" [ref=e491]:
+                - code [ref=e492]: "#782CC3"
+            - 'row "$hse-secondary-button-disabled-text-color $color_hse-grey-500 #768692" [ref=e493]':
+              - cell "$hse-secondary-button-disabled-text-color" [ref=e494]:
+                - code [ref=e496]: $hse-secondary-button-disabled-text-color
+              - cell "$color_hse-grey-500" [ref=e497]:
+                - code [ref=e498]: $color_hse-grey-500
+              - cell "#768692" [ref=e499]:
+                - code [ref=e500]: "#768692"
+        - heading "Text button text colour" [level=3] [ref=e501]
+        - table "Table of text button text colours" [ref=e502]:
+          - rowgroup [ref=e503]:
+            - row "Sass text name Sass text code Hex value" [ref=e504]:
+              - columnheader "Sass text name" [ref=e505]
+              - columnheader "Sass text code" [ref=e506]
+              - columnheader "Hex value" [ref=e507]
+          - rowgroup [ref=e508]:
+            - 'row "$hse-text-button-text-color $hse-text-button-border-color #5F3DC4" [ref=e509]':
+              - cell "$hse-text-button-text-color" [ref=e510]:
+                - code [ref=e512]: $hse-text-button-text-color
+              - cell "$hse-text-button-border-color" [ref=e513]:
+                - code [ref=e514]: $hse-text-button-border-color
+              - cell "#5F3DC4" [ref=e515]:
+                - code [ref=e516]: "#5F3DC4"
+            - 'row "$hse-text-button-hover-text-color $hse-text-button-hover-color #782CC3" [ref=e517]':
+              - cell "$hse-text-button-hover-text-color" [ref=e518]:
+                - code [ref=e520]: $hse-text-button-hover-text-color
+              - cell "$hse-text-button-hover-color" [ref=e521]:
+                - code [ref=e522]: $hse-text-button-hover-color
+              - cell "#782CC3" [ref=e523]:
+                - code [ref=e524]: "#782CC3"
+            - 'row "$hse-text-button-disabled-text-color $color_hse-grey-500 #768692" [ref=e525]':
+              - cell "$hse-text-button-disabled-text-color" [ref=e526]:
+                - code [ref=e528]: $hse-text-button-disabled-text-color
+              - cell "$color_hse-grey-500" [ref=e529]:
+                - code [ref=e530]: $color_hse-grey-500
+              - cell "#768692" [ref=e531]:
+                - code [ref=e532]: "#768692"
+        - heading "Reverse button text colour" [level=3] [ref=e533]
+        - table "Table of reverse button text colours" [ref=e534]:
+          - rowgroup [ref=e535]:
+            - row "Sass text name Sass text code Hex value" [ref=e536]:
+              - columnheader "Sass text name" [ref=e537]
+              - columnheader "Sass text code" [ref=e538]
+              - columnheader "Hex value" [ref=e539]
+          - rowgroup [ref=e540]:
+            - 'row "$hse-reverse-button-text-color $color_hse-grey-900 #212B32" [ref=e541]':
+              - cell "$hse-reverse-button-text-color" [ref=e542]:
+                - code [ref=e544]: $hse-reverse-button-text-color
+              - cell "$color_hse-grey-900" [ref=e545]:
+                - code [ref=e546]: $color_hse-grey-900
+              - cell "#212B32" [ref=e547]:
+                - code [ref=e548]: "#212B32"
+            - 'row "$hse-reverse-button-disabled-text-color $color_hse-grey-500 #768692" [ref=e549]':
+              - cell "$hse-reverse-button-disabled-text-color" [ref=e550]:
+                - code [ref=e552]: $hse-reverse-button-disabled-text-color
+              - cell "$color_hse-grey-500" [ref=e553]:
+                - code [ref=e554]: $color_hse-grey-500
+              - cell "#768692" [ref=e555]:
+                - code [ref=e556]: "#768692"
+        - heading "Page background colour" [level=3] [ref=e557]
+        - paragraph [ref=e558]:
+          - text: We use
+          - code [ref=e559]: $color_hse-grey-50
+          - text: "as a background tint. This is because:"
+        - list [ref=e560]:
+          - listitem [ref=e561]: it reduces overall page glare
+          - listitem [ref=e562]:
+            - text: the
+            - link "British Dyslexia Association" [ref=e563] [cursor=pointer]:
+              - /url: https://www.bdadyslexia.org.uk/employer/dyslexia-style-guide-2018-creating-dyslexia-friendly-content
+            - text: recommends dark text on a light, but not white, background
+          - listitem [ref=e564]: components with important information, like callouts, stand out
+        - paragraph [ref=e565]:
+          - code [ref=e566]: $color_hse-white-0
+          - text: is used to make important information stand out and for alternating backgrounds, for example on
+          - link "the HSE website home page" [ref=e567] [cursor=pointer]:
+            - /url: https://www.hse.ie
+          - text: .
+        - heading "Colour palette" [level=2] [ref=e568]
+        - paragraph [ref=e569]:
+          - text: Avoid using the palette colours if there is a Sass variable that is designed for your context. For example, if you are styling the error state of a component you should use the
+          - code [ref=e570]: $hse-error-color
+          - text: Sass variable rather than
+          - code [ref=e571]: $color_hse-red-500
+          - text: .
+        - heading "HSE Green" [level=3] [ref=e572]
+        - table "Table of the full colour palette" [ref=e573]:
+          - rowgroup [ref=e574]:
+            - row "Sass text name Hex value" [ref=e575]:
+              - columnheader "Sass text name" [ref=e576]
+              - columnheader "Hex value" [ref=e577]
+          - rowgroup [ref=e578]:
+            - 'row "$color_hse-green-900 #00473E" [ref=e579]':
+              - cell "$color_hse-green-900" [ref=e580]:
+                - code [ref=e582]: $color_hse-green-900
+              - cell "#00473E" [ref=e583]:
+                - code [ref=e584]: "#00473E"
+            - 'row "$color_hse-green-700 #02594C" [ref=e585]':
+              - cell "$color_hse-green-700" [ref=e586]:
+                - code [ref=e588]: $color_hse-green-700
+              - cell "#02594C" [ref=e589]:
+                - code [ref=e590]: "#02594C"
+            - 'row "$color_hse-green-500 #02A78B" [ref=e591]':
+              - cell "$color_hse-green-500" [ref=e592]:
+                - code [ref=e594]: $color_hse-green-500
+              - cell "#02A78B" [ref=e595]:
+                - code [ref=e596]: "#02A78B"
+            - 'row "$color_hse-green-300 #73E6C2" [ref=e597]':
+              - cell "$color_hse-green-300" [ref=e598]:
+                - code [ref=e600]: $color_hse-green-300
+              - cell "#73E6C2" [ref=e601]:
+                - code [ref=e602]: "#73E6C2"
+            - 'row "$color_hse-green-100 #80FFD8" [ref=e603]':
+              - cell "$color_hse-green-100" [ref=e604]:
+                - code [ref=e606]: $color_hse-green-100
+              - cell "#80FFD8" [ref=e607]:
+                - code [ref=e608]: "#80FFD8"
+            - 'row "$color_hse-green-50 #ECFBF6" [ref=e609]':
+              - cell "$color_hse-green-50" [ref=e610]:
+                - code [ref=e612]: $color_hse-green-50
+              - cell "#ECFBF6" [ref=e613]:
+                - code [ref=e614]: "#ECFBF6"
+        - heading "Greyscale" [level=3] [ref=e615]
+        - table "Table of the greyscale palette" [ref=e616]:
+          - rowgroup [ref=e617]:
+            - row "Sass text name Hex value" [ref=e618]:
+              - columnheader "Sass text name" [ref=e619]
+              - columnheader "Hex value" [ref=e620]
+          - rowgroup [ref=e621]:
+            - 'row "$color_hse-grey-900 #212B32" [ref=e622]':
+              - cell "$color_hse-grey-900" [ref=e623]:
+                - code [ref=e625]: $color_hse-grey-900
+              - cell "#212B32" [ref=e626]:
+                - code [ref=e627]: "#212B32"
+            - 'row "$color_hse-grey-700 #455C68" [ref=e628]':
+              - cell "$color_hse-grey-700" [ref=e629]:
+                - code [ref=e631]: $color_hse-grey-700
+              - cell "#455C68" [ref=e632]:
+                - code [ref=e633]: "#455C68"
+            - 'row "$color_hse-grey-500 #768692" [ref=e634]':
+              - cell "$color_hse-grey-500" [ref=e635]:
+                - code [ref=e637]: $color_hse-grey-500
+              - cell "#768692" [ref=e638]:
+                - code [ref=e639]: "#768692"
+            - 'row "$color_hse-grey-300 #AEB7BD" [ref=e640]':
+              - cell "$color_hse-grey-300" [ref=e641]:
+                - code [ref=e643]: $color_hse-grey-300
+              - cell "#AEB7BD" [ref=e644]:
+                - code [ref=e645]: "#AEB7BD"
+            - 'row "$color_hse-grey-100 #D8DDE0" [ref=e646]':
+              - cell "$color_hse-grey-100" [ref=e647]:
+                - code [ref=e649]: $color_hse-grey-100
+              - cell "#D8DDE0" [ref=e650]:
+                - code [ref=e651]: "#D8DDE0"
+            - 'row "$color_hse-grey-50 #F3F3F3" [ref=e652]':
+              - cell "$color_hse-grey-50" [ref=e653]:
+                - code [ref=e655]: $color_hse-grey-50
+              - cell "#F3F3F3" [ref=e656]:
+                - code [ref=e657]: "#F3F3F3"
+            - 'row "$color_hse-white-0 #FFF" [ref=e658]':
+              - cell "$color_hse-white-0" [ref=e659]:
+                - code [ref=e661]: $color_hse-white-0
+              - cell "#FFF" [ref=e662]:
+                - code [ref=e663]: "#FFF"
+        - heading "Purple" [level=3] [ref=e664]
+        - table "Table of the purple palette" [ref=e665]:
+          - rowgroup [ref=e666]:
+            - row "Sass text name Hex value" [ref=e667]:
+              - columnheader "Sass text name" [ref=e668]
+              - columnheader "Hex value" [ref=e669]
+          - rowgroup [ref=e670]:
+            - 'row "$color_hse-purple-700 #5F3DC4" [ref=e671]':
+              - cell "$color_hse-purple-700" [ref=e672]:
+                - code [ref=e674]: $color_hse-purple-700
+              - cell "#5F3DC4" [ref=e675]:
+                - code [ref=e676]: "#5F3DC4"
+            - 'row "$color_hse-purple-500 #782CC3" [ref=e677]':
+              - cell "$color_hse-purple-500" [ref=e678]:
+                - code [ref=e680]: $color_hse-purple-500
+              - cell "#782CC3" [ref=e681]:
+                - code [ref=e682]: "#782CC3"
+            - 'row "$color_hse-purple-300 #AA37E0" [ref=e683]':
+              - cell "$color_hse-purple-300" [ref=e684]:
+                - code [ref=e686]: $color_hse-purple-300
+              - cell "#AA37E0" [ref=e687]:
+                - code [ref=e688]: "#AA37E0"
+        - heading "Blue" [level=3] [ref=e689]
+        - table "Table of the blue palette" [ref=e690]:
+          - rowgroup [ref=e691]:
+            - row "Sass text name Hex value" [ref=e692]:
+              - columnheader "Sass text name" [ref=e693]
+              - columnheader "Hex value" [ref=e694]
+          - rowgroup [ref=e695]:
+            - 'row "$color_hse-blue-900 #042249" [ref=e696]':
+              - cell "$color_hse-blue-900" [ref=e697]:
+                - code [ref=e699]: $color_hse-blue-900
+              - cell "#042249" [ref=e700]:
+                - code [ref=e701]: "#042249"
+            - 'row "$color_hse-blue-800 #07336E" [ref=e702]':
+              - cell "$color_hse-blue-800" [ref=e703]:
+                - code [ref=e705]: $color_hse-blue-800
+              - cell "#07336E" [ref=e706]:
+                - code [ref=e707]: "#07336E"
+            - 'row "$color_hse-blue-600 #094492" [ref=e708]':
+              - cell "$color_hse-blue-600" [ref=e709]:
+                - code [ref=e711]: $color_hse-blue-600
+              - cell "#094492" [ref=e712]:
+                - code [ref=e713]: "#094492"
+            - 'row "$color_hse-blue-500 #0B55B7" [ref=e714]':
+              - cell "$color_hse-blue-500" [ref=e715]:
+                - code [ref=e717]: $color_hse-blue-500
+              - cell "#0B55B7" [ref=e718]:
+                - code [ref=e719]: "#0B55B7"
+            - 'row "$color_hse-blue-300 #6D99D4" [ref=e720]':
+              - cell "$color_hse-blue-300" [ref=e721]:
+                - code [ref=e723]: $color_hse-blue-300
+              - cell "#6D99D4" [ref=e724]:
+                - code [ref=e725]: "#6D99D4"
+            - 'row "$color_hse-blue-100 #CEDDF1" [ref=e726]':
+              - cell "$color_hse-blue-100" [ref=e727]:
+                - code [ref=e729]: $color_hse-blue-100
+              - cell "#CEDDF1" [ref=e730]:
+                - code [ref=e731]: "#CEDDF1"
+            - 'row "$color_hse-blue-50 #DBE7FF" [ref=e732]':
+              - cell "$color_hse-blue-50" [ref=e733]:
+                - code [ref=e735]: $color_hse-blue-50
+              - cell "#DBE7FF" [ref=e736]:
+                - code [ref=e737]: "#DBE7FF"
+        - heading "Red" [level=3] [ref=e738]
+        - table "Table of the red palette" [ref=e739]:
+          - rowgroup [ref=e740]:
+            - row "Sass text name Hex value" [ref=e741]:
+              - columnheader "Sass text name" [ref=e742]
+              - columnheader "Hex value" [ref=e743]
+          - rowgroup [ref=e744]:
+            - 'row "$color_hse-red-500 #B30638" [ref=e745]':
+              - cell "$color_hse-red-500" [ref=e746]:
+                - code [ref=e748]: $color_hse-red-500
+              - cell "#B30638" [ref=e749]:
+                - code [ref=e750]: "#B30638"
+        - heading "Yellow" [level=3] [ref=e751]
+        - table "Table of the yellow palette" [ref=e752]:
+          - rowgroup [ref=e753]:
+            - row "Sass text name Hex value" [ref=e754]:
+              - columnheader "Sass text name" [ref=e755]
+              - columnheader "Hex value" [ref=e756]
+          - rowgroup [ref=e757]:
+            - 'row "$color_hse-yellow-500 #FFDE0E" [ref=e758]':
+              - cell "$color_hse-yellow-500" [ref=e759]:
+                - code [ref=e761]: $color_hse-yellow-500
+              - cell "#FFDE0E" [ref=e762]:
+                - code [ref=e763]: "#FFDE0E"
+        - heading "Functions for tint and shade" [level=2] [ref=e764]
+        - table "Table of the functions for tint and shade" [ref=e765]:
+          - rowgroup [ref=e766]:
+            - row "Sass name Sass function Description" [ref=e767]:
+              - columnheader "Sass name" [ref=e768]
+              - columnheader "Sass function" [ref=e769]
+              - columnheader "Description" [ref=e770]
+          - rowgroup [ref=e771]:
+            - row "$color_tint_hse-black-10 tint($color_hse-grey-900, 10%) used for link :active states" [ref=e772]:
+              - cell "$color_tint_hse-black-10" [ref=e773]
+              - cell "tint($color_hse-grey-900, 10%)" [ref=e774]:
+                - code [ref=e775]: tint($color_hse-grey-900, 10%)
+              - cell "used for link :active states" [ref=e776]
+            - row "$color_shade_hse-blue-20 shade($color_hse-blue, 20%) used for .is-active state on main navigation" [ref=e777]:
+              - cell "$color_shade_hse-blue-20" [ref=e778]
+              - cell "shade($color_hse-blue, 20%)" [ref=e779]:
+                - code [ref=e780]: shade($color_hse-blue, 20%)
+              - cell "used for .is-active state on main navigation" [ref=e781]
+            - row "$color_shade_hse-blue-35s shade($color_hse-blue, 35%) used for :hover states on main navigation" [ref=e782]:
+              - cell "$color_shade_hse-blue-35s" [ref=e783]
+              - cell "shade($color_hse-blue, 35%)" [ref=e784]:
+                - code [ref=e785]: shade($color_hse-blue, 35%)
+              - cell "used for :hover states on main navigation" [ref=e786]
+            - row "$color_shade_hse-blue-50 shade($color_hse-blue, 50%) used for :active states on main navigation" [ref=e787]:
+              - cell "$color_shade_hse-blue-50" [ref=e788]
+              - cell "shade($color_hse-blue, 50%)" [ref=e789]:
+                - code [ref=e790]: shade($color_hse-blue, 50%)
+              - cell "used for :active states on main navigation" [ref=e791]
+            - row "$color_shade_hse-green-20 shade($color_hse-green-700, 20%) Undefined" [ref=e792]:
+              - cell "$color_shade_hse-green-20" [ref=e793]
+              - cell "shade($color_hse-green-700, 20%)" [ref=e794]:
+                - code [ref=e795]: shade($color_hse-green-700, 20%)
+              - cell "Undefined" [ref=e796]
+            - row "$color_shade_hse-green-35 shade($color_hse-green-700, 35%) used for primary button and action link icon :hover states" [ref=e797]:
+              - cell "$color_shade_hse-green-35" [ref=e798]
+              - cell "shade($color_hse-green-700, 35%)" [ref=e799]:
+                - code [ref=e800]: shade($color_hse-green-700, 35%)
+              - cell "used for primary button and action link icon :hover states" [ref=e801]
+            - row "$color_shade_hse-green-50 shade($color_hse-green-700, 50%) used for primary button and action link icon :active states" [ref=e802]:
+              - cell "$color_shade_hse-green-50" [ref=e803]
+              - cell "shade($color_hse-green-700, 50%)" [ref=e804]:
+                - code [ref=e805]: shade($color_hse-green-700, 50%)
+              - cell "used for primary button and action link icon :active states" [ref=e806]
+            - row "$color_shade_hse-red-20 shade($color_hse-red-500, 20%) Undefined" [ref=e807]:
+              - cell "$color_shade_hse-red-20" [ref=e808]
+              - cell "shade($color_hse-red-500, 20%)" [ref=e809]:
+                - code [ref=e810]: shade($color_hse-red-500, 20%)
+              - cell "Undefined" [ref=e811]
+            - row "$color_shade_hse-red-35 shade($color_hse-red-500, 35%) Undefined" [ref=e812]:
+              - cell "$color_shade_hse-red-35" [ref=e813]
+              - cell "shade($color_hse-red-500, 35%)" [ref=e814]:
+                - code [ref=e815]: shade($color_hse-red-500, 35%)
+              - cell "Undefined" [ref=e816]
+            - row "$color_shade_hse-red-50 shade($color_hse-red-500, 50%) Undefined" [ref=e817]:
+              - cell "$color_shade_hse-red-50" [ref=e818]
+              - cell "shade($color_hse-red-500, 50%)" [ref=e819]:
+                - code [ref=e820]: shade($color_hse-red-500, 50%)
+              - cell "Undefined" [ref=e821]
+            - row "$color_transparent_hse-white-20 rgba($color_hse-white-0, .2) Undefined" [ref=e822]:
+              - cell "$color_transparent_hse-white-20" [ref=e823]
+              - cell "rgba($color_hse-white-0, .2)" [ref=e824]:
+                - code [ref=e825]: rgba($color_hse-white-0, .2)
+              - cell "Undefined" [ref=e826]
+            - row "$color_transparent_hse-blue-50 rgba($color_shade_hse-blue-50, .1) Undefined" [ref=e827]:
+              - cell "$color_transparent_hse-blue-50" [ref=e828]
+              - cell "rgba($color_shade_hse-blue-50, .1)" [ref=e829]:
+                - code [ref=e830]: rgba($color_shade_hse-blue-50, .1)
+              - cell "Undefined" [ref=e831]
+            - row "$color_transparent_hse-green-50 rgba($color_shade_hse-green-50, .1) Undefined" [ref=e832]:
+              - cell "$color_transparent_hse-green-50" [ref=e833]
+              - cell "rgba($color_shade_hse-green-50, .1)" [ref=e834]:
+                - code [ref=e835]: rgba($color_shade_hse-green-50, .1)
+              - cell "Undefined" [ref=e836]
+            - row "$color_shade_hse-grey-1-20 shade($color_hse-grey-700, 20%) Undefined" [ref=e837]:
+              - cell "$color_shade_hse-grey-1-20" [ref=e838]
+              - cell "shade($color_hse-grey-700, 20%)" [ref=e839]:
+                - code [ref=e840]: shade($color_hse-grey-700, 20%)
+              - cell "Undefined" [ref=e841]
+        - heading "Extended colours" [level=2] [ref=e842]
+        - paragraph [ref=e843]:
+          - text: The
+          - link "HSE Visual Identity Guidelines" [ref=e844] [cursor=pointer]:
+            - /url: https://www2.healthservice.hse.ie/organisation/national-pppgs/visual-identity-guidelines-for-hse-and-funded-agencies/
+          - text: have an extended colour palette. We haven't tested these colours yet for digital use.
+        - heading "Accessibility" [level=2] [ref=e845]
+        - paragraph [ref=e846]: Make sure that what the colour is "saying" is available in other ways. Read "Do not rely on colour or position alone" in our accessibility guidance.
+        - heading "Colour contrast" [level=3] [ref=e847]
+        - paragraph [ref=e848]:
+          - text: Text and components, like buttons, must have contrast ratios that meet
+          - link "the contrast minimum for AA of the Web Content Accessibility Guidelines (WCAG 2.1)" [ref=e849] [cursor=pointer]:
+            - /url: https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
+          - text: . We aim for AAA as far as possible.
+        - paragraph [ref=e850]: This helps people with colour vision deficiency (colour blindness) who find it difficult to distinguish between certain colours, often shades of red, yellow and green.
+        - group [ref=e851]:
+          - generic "More about contrast in components and graphic elements" [ref=e852] [cursor=pointer]
+        - heading "AA" [level=4] [ref=e853]
+        - paragraph [ref=e854]: "The contrast ratio should be at least:"
+        - list [ref=e855]:
+          - listitem [ref=e856]: 4.5:1 for small text (smaller than 24px, or 19px if bold)
+          - listitem [ref=e857]: 3:1 for large text (larger than 24px, or 19px if bold) and components (like a text input field or button) and graphic elements (like an icon)
+        - heading "AAA" [level=4] [ref=e858]
+        - paragraph [ref=e859]: "The contrast ratio should be at least:"
+        - list [ref=e860]:
+          - listitem [ref=e861]: 7:1 for small text (smaller than 24px, or 19px if bold)
+          - listitem [ref=e862]: 4.5:1 for large text (larger than 24px, or 19px if bold) and components (like a text input field or button) and graphic elements (like an icon)
+        - heading "Testing tools" [level=4] [ref=e863]
+        - paragraph [ref=e864]: "Use tools like these to check contrast:"
+        - list [ref=e865]:
+          - listitem [ref=e866]:
+            - link "WebAIM's colour contrast checker" [ref=e867] [cursor=pointer]:
+              - /url: https://webaim.org/resources/contrastchecker/
+          - listitem [ref=e868]:
+            - link "Color Oracle (free colour blindness simulator)" [ref=e869] [cursor=pointer]:
+              - /url: https://colororacle.org/
+        - paragraph [ref=e870]: Also test colour contrast with people of all abilities.
+        - paragraph [ref=e871]: "Updated: September 2023"
+  - contentinfo [ref=e872]:
+    - generic [ref=e874]:
+      - generic:
+        - heading "Support links" [level=2] [ref=e875]
+        - list [ref=e876]:
+          - listitem [ref=e877]:
+            - link "Cookies Statement" [ref=e878] [cursor=pointer]:
+              - /url: /cookies-statement
+          - listitem [ref=e879]:
+            - link "Cookies Settings" [ref=e880] [cursor=pointer]:
+              - /url: /cookies-settings
+          - listitem [ref=e881]:
+            - link "Accessibility Statement" [ref=e882] [cursor=pointer]:
+              - /url: /accessibility-statement
+          - listitem [ref=e883]:
+            - link "Privacy Statement" [ref=e884] [cursor=pointer]:
+              - /url: /privacy-statement
+          - listitem [ref=e885]:
+            - link "Disclaimer" [ref=e886] [cursor=pointer]:
+              - /url: /disclaimer
+          - listitem [ref=e887]:
+            - link "Site map" [ref=e888] [cursor=pointer]:
+              - /url: /site-map
+        - paragraph [ref=e889]: © Health Service Executive

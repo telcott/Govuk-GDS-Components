@@ -1,0 +1,385 @@
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#maincontent"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "H-S-E - homepage" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e13]: Service manual
+      - navigation "H-S-E Main Menu" [ref=e14]:
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - link "Design system" [ref=e19] [cursor=pointer]:
+              - /url: /design-system
+          - listitem [ref=e20]:
+            - link "Content design" [ref=e21] [cursor=pointer]:
+              - /url: /content
+          - listitem [ref=e22]:
+            - link "Accessibility" [ref=e23] [cursor=pointer]:
+              - /url: /accessibility
+  - navigation "Breadcrumb" [ref=e24]:
+    - list [ref=e26]:
+      - listitem [ref=e27]:
+        - link "Home" [ref=e28] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e29]:
+        - link "Design system" [ref=e30] [cursor=pointer]:
+          - /url: /design-system
+      - listitem [ref=e31]:
+        - link "Components" [ref=e32] [cursor=pointer]:
+          - /url: /design-system/components
+  - main [ref=e34]:
+    - generic [ref=e37]:
+      - navigation [ref=e39]:
+        - link "Design system" [ref=e41] [cursor=pointer]:
+          - /url: /design-system
+          - img [ref=e42]
+          - text: Design system
+        - heading "Form elements" [level=2] [ref=e44]
+        - list [ref=e45]:
+          - listitem [ref=e46]:
+            - link "Buttons" [ref=e47] [cursor=pointer]:
+              - /url: /design-system/components/buttons
+          - listitem [ref=e48]:
+            - link "Checkboxes" [ref=e49] [cursor=pointer]:
+              - /url: /design-system/components/checkboxes
+          - listitem [ref=e50]:
+            - link "Date input" [ref=e51] [cursor=pointer]:
+              - /url: /design-system/components/date-input
+          - listitem [ref=e52]:
+            - link "Dropdown select" [ref=e53] [cursor=pointer]:
+              - /url: /design-system/components/dropdown-select
+          - listitem [ref=e54]:
+            - link "Error message" [ref=e55] [cursor=pointer]:
+              - /url: /design-system/components/error-message
+          - listitem [ref=e56]:
+            - link "Error summary" [ref=e57] [cursor=pointer]:
+              - /url: /design-system/components/error-summary
+          - listitem [ref=e58]:
+            - link "Fieldset" [ref=e59] [cursor=pointer]:
+              - /url: /design-system/components/fieldset
+          - listitem [ref=e60]:
+            - link "File upload" [ref=e61] [cursor=pointer]:
+              - /url: /design-system/components/file-upload
+          - listitem [ref=e62]:
+            - link "Hint text" [ref=e63] [cursor=pointer]:
+              - /url: /design-system/components/hint-text
+          - listitem [ref=e64]:
+            - link "Radios" [ref=e65] [cursor=pointer]:
+              - /url: /design-system/components/radios
+          - listitem [ref=e66]:
+            - link "Textarea" [ref=e67] [cursor=pointer]:
+              - /url: /design-system/components/textarea
+          - listitem [ref=e68]:
+            - link "Text input" [disabled]:
+              - /url: /design-system/components/text-input
+        - heading "Content presentation" [level=2] [ref=e69]
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - link "Care cards" [ref=e72] [cursor=pointer]:
+              - /url: /design-system/components/care-cards
+          - listitem [ref=e73]:
+            - link "Details" [ref=e74] [cursor=pointer]:
+              - /url: /design-system/components/details
+          - listitem [ref=e75]:
+            - link "Do and Don't lists" [ref=e76] [cursor=pointer]:
+              - /url: /design-system/components/do-and-dont-lists
+          - listitem [ref=e77]:
+            - link "Expander" [ref=e78] [cursor=pointer]:
+              - /url: /design-system/components/expander
+          - listitem [ref=e79]:
+            - link "Images" [ref=e80] [cursor=pointer]:
+              - /url: /design-system/components/images
+          - listitem [ref=e81]:
+            - link "Inset text" [ref=e82] [cursor=pointer]:
+              - /url: /design-system/components/inset-text
+          - listitem [ref=e83]:
+            - link "Review date" [ref=e84] [cursor=pointer]:
+              - /url: /design-system/components/review-date
+          - listitem [ref=e85]:
+            - link "Table" [ref=e86] [cursor=pointer]:
+              - /url: /design-system/components/table
+          - listitem [ref=e87]:
+            - link "Warning callout" [ref=e88] [cursor=pointer]:
+              - /url: /design-system/components/warning-callout
+        - heading "Navigation" [level=2] [ref=e89]
+        - list [ref=e90]:
+          - listitem [ref=e91]:
+            - link "Action link" [ref=e92] [cursor=pointer]:
+              - /url: /design-system/components/action-link
+          - listitem [ref=e93]:
+            - link "Back link" [ref=e94] [cursor=pointer]:
+              - /url: /design-system/components/back-link
+          - listitem [ref=e95]:
+            - link "Breadcrumbs" [ref=e96] [cursor=pointer]:
+              - /url: /design-system/components/breadcrumbs
+          - listitem [ref=e97]:
+            - link "Contents list" [ref=e98] [cursor=pointer]:
+              - /url: /design-system/components/contents-list
+          - listitem [ref=e99]:
+            - link "Curated hub navigation" [ref=e100] [cursor=pointer]:
+              - /url: /design-system/components/curated-hub-navigation
+          - listitem [ref=e101]:
+            - link "Footer" [ref=e102] [cursor=pointer]:
+              - /url: /design-system/components/footer
+          - listitem [ref=e103]:
+            - link "Links list" [ref=e104] [cursor=pointer]:
+              - /url: /design-system/components/links-list
+          - listitem [ref=e105]:
+            - link "List panel" [ref=e106] [cursor=pointer]:
+              - /url: /design-system/components/list-panel
+          - listitem [ref=e107]:
+            - link "Next/previous pagination" [ref=e108] [cursor=pointer]:
+              - /url: /design-system/components/pagination
+          - listitem [ref=e109]:
+            - link "Page link" [ref=e110] [cursor=pointer]:
+              - /url: /design-system/components/page-link
+          - listitem [ref=e111]:
+            - link "Page contents" [ref=e112] [cursor=pointer]:
+              - /url: /design-system/components/page-contents
+          - listitem [ref=e113]:
+            - link "Skip link" [ref=e114] [cursor=pointer]:
+              - /url: /design-system/components/skip-link
+          - listitem [ref=e115]:
+            - link "Transactional header" [ref=e116] [cursor=pointer]:
+              - /url: /design-system/components/transactional-header
+      - generic [ref=e117]:
+        - heading "Form elements - Text input" [level=1] [ref=e118]:
+          - generic [ref=e119]:
+            - text: Form elements
+            - generic [ref=e120]: "-"
+          - text: Text input
+        - paragraph [ref=e121]: Use text input to let users enter a single line of text.
+        - generic [ref=e122]:
+          - link "Open this default text input example in new window" [ref=e123] [cursor=pointer]:
+            - /url: /design-example/components/text-input/default?fullpage=undefined&blankpage=undefined
+            - text: Open this
+            - generic [ref=e124]: default text input
+            - text: example in new window
+          - iframe [ref=e126]:
+            - generic [ref=f1e2]:
+              - generic [ref=f1e3]: What is your name?
+              - textbox "What is your name?" [ref=f1e4]
+          - generic [ref=e127]:
+            - tablist [ref=e128]:
+              - tab "HTML code for default text input" [active] [selected] [ref=e129] [cursor=pointer]:
+                - text: HTML
+                - generic [ref=e130]: code for default text input
+              - tab "Nunjucks code for default text input" [selected] [ref=e131] [cursor=pointer]:
+                - text: Nunjucks
+                - generic [ref=e132]: code for default text input
+            - tabpanel [ref=e133]:
+              - generic [ref=e246]:
+                - generic [ref=e247]:
+                  - link "Copy default text input code" [ref=e248] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                    - text: Copy
+                    - generic [ref=e249]: default text input
+                    - text: code
+                  - code [ref=e251]:
+                    - generic [ref=e252]: <div class="hse-form-group">
+                    - generic [ref=e253]: <label class="hse-label" for="example">
+                    - text: What is your name?
+                    - generic [ref=e254]: </label>
+                    - generic [ref=e255]: <input class="hse-input" id="example" name="example" type="text">
+                    - generic [ref=e256]: </div>
+                - link "Close default text input code" [ref=e257] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - text: Close
+                  - generic [ref=e258]: default text input code
+        - heading "When to use a text input" [level=2] [ref=e134]
+        - paragraph [ref=e135]: Use this when you need users to enter text that is no longer than 1 line. For example, their name or phone number.
+        - heading "When not to use a text input" [level=2] [ref=e136]
+        - paragraph [ref=e137]:
+          - text: Do not use this if you need users to enter longer answers that might span several lines. In this case, use a
+          - link "textarea" [ref=e138] [cursor=pointer]:
+            - /url: /design-system/components/textarea
+          - text: .
+        - heading "How to use text input" [level=2] [ref=e139]
+        - heading "Label text inputs" [level=3] [ref=e140]
+        - paragraph [ref=e141]: Give text inputs a visible label.
+        - paragraph [ref=e142]: Do not use placeholder text for a label as it disappears when users click on the text input.
+        - paragraph [ref=e143]: Align labels above the text inputs they refer to. Labels should be short, direct and written in sentence case. Do not use colons at the end of labels.
+        - paragraph [ref=e144]:
+          - text: If you are asking just 1 question per page, you can set the contents of the
+          - code [ref=e145]: <label>
+          - text: as the page heading. This is good practice as it means that people who use screen readers will only hear the contents once.
+        - generic [ref=e146]:
+          - link "Open this heading text input example in new window" [ref=e147] [cursor=pointer]:
+            - /url: /design-example/components/text-input/heading?fullpage=undefined&blankpage=undefined
+            - text: Open this
+            - generic [ref=e148]: heading text input
+            - text: example in new window
+          - iframe [ref=e150]:
+            - generic [ref=f2e2]:
+              - heading "What is your name?" [level=1] [ref=f2e3]:
+                - generic [ref=f2e4]: What is your name?
+              - textbox "What is your name?" [ref=f2e5]
+          - generic [ref=e151]:
+            - tablist [ref=e152]:
+              - tab "HTML code for heading text input" [selected] [ref=e153] [cursor=pointer]:
+                - text: HTML
+                - generic [ref=e154]: code for heading text input
+              - tab "Nunjucks code for heading text input" [selected] [ref=e155] [cursor=pointer]:
+                - text: Nunjucks
+                - generic [ref=e156]: code for heading text input
+            - tabpanel [ref=e157]
+        - heading "Make text inputs the right size" [level=3] [ref=e158]
+        - paragraph [ref=e159]: Help users understand what they should enter by making text inputs the right size for the information you want them to give you.
+        - paragraph [ref=e160]: By default, the width of text inputs is fluid and will fit the full width of the container they are placed into.
+        - paragraph [ref=e161]: Make text input fields scrollable so users can enter values longer than the length of the entry field. Make sure that international character symbols are not disabled, such as a 'fada' or 'ˆ'.
+        - paragraph [ref=e162]: Do not place character limits on input fields.
+        - paragraph [ref=e163]: "If you want to make the input smaller, you can use 1 of the following:"
+        - list [ref=e164]:
+          - listitem [ref=e165]: a fixed width input
+          - listitem [ref=e166]: the width override classes to create a smaller, fluid width input
+        - heading "Fixed width inputs" [level=4] [ref=e167]
+        - paragraph [ref=e168]: Use fixed width inputs for content that has a specific, known length. For example, phone number inputs should be the size of a phone number.
+        - paragraph [ref=e169]: On fixed width inputs, the width will remain fixed on all screens unless it is wider than the viewport, in which case it will shrink to fit.
+        - generic [ref=e170]:
+          - link "Open this fixed width text input example in new window" [ref=e171] [cursor=pointer]:
+            - /url: /design-example/components/text-input/fixed-width?fullpage=undefined&blankpage=undefined
+            - text: Open this
+            - generic [ref=e172]: fixed width text input
+            - text: example in new window
+          - iframe [ref=e174]:
+            - generic [active] [ref=f3e1]:
+              - generic [ref=f3e2]:
+                - generic [ref=f3e3]: 20 character width
+                - textbox "20 character width" [ref=f3e4]
+              - generic [ref=f3e5]:
+                - generic [ref=f3e6]: 10 character width
+                - textbox "10 character width" [ref=f3e7]
+              - generic [ref=f3e8]:
+                - generic [ref=f3e9]: 5 character width
+                - textbox "5 character width" [ref=f3e10]
+              - generic [ref=f3e11]:
+                - generic [ref=f3e12]: 4 character width
+                - textbox "4 character width" [ref=f3e13]
+              - generic [ref=f3e14]:
+                - generic [ref=f3e15]: 3 character width
+                - textbox "3 character width" [ref=f3e16]
+              - generic [ref=f3e17]:
+                - generic [ref=f3e18]: 2 character width
+                - textbox "2 character width" [ref=f3e19]
+          - generic [ref=e175]:
+            - tablist [ref=e176]:
+              - tab "HTML code for fixed width text input" [selected] [ref=e177] [cursor=pointer]:
+                - text: HTML
+                - generic [ref=e178]: code for fixed width text input
+              - tab "Nunjucks code for fixed width text input" [selected] [ref=e179] [cursor=pointer]:
+                - text: Nunjucks
+                - generic [ref=e180]: code for fixed width text input
+            - tabpanel [ref=e181]
+        - heading "Fluid width inputs" [level=4] [ref=e182]
+        - paragraph [ref=e183]: Use the width override classes to reduce the width of an input in relation to its parent container. For example, to 2 thirds.
+        - paragraph [ref=e184]: Fluid width inputs will resize with the viewport.
+        - generic [ref=e185]:
+          - link "Open this fluid width text input example in new window" [ref=e186] [cursor=pointer]:
+            - /url: /design-example/components/text-input/fluid-width?fullpage=undefined&blankpage=undefined
+            - text: Open this
+            - generic [ref=e187]: fluid width text input
+            - text: example in new window
+          - iframe [ref=e189]:
+            - generic [active] [ref=f4e1]:
+              - generic [ref=f4e2]:
+                - generic [ref=f4e3]: Full width
+                - textbox "Full width" [ref=f4e4]
+              - generic [ref=f4e5]:
+                - generic [ref=f4e6]: Three-quarters width
+                - textbox "Three-quarters width" [ref=f4e7]
+              - generic [ref=f4e8]:
+                - generic [ref=f4e9]: Two-thirds width
+                - textbox "Two-thirds width" [ref=f4e10]
+              - generic [ref=f4e11]:
+                - generic [ref=f4e12]: One-half width
+                - textbox "One-half width" [ref=f4e13]
+              - generic [ref=f4e14]:
+                - generic [ref=f4e15]: One-third width
+                - textbox "One-third width" [ref=f4e16]
+              - generic [ref=f4e17]:
+                - generic [ref=f4e18]: One-quarter width
+                - textbox "One-quarter width" [ref=f4e19]
+          - generic [ref=e190]:
+            - tablist [ref=e191]:
+              - tab "HTML code for fluid width text input" [selected] [ref=e192] [cursor=pointer]:
+                - text: HTML
+                - generic [ref=e193]: code for fluid width text input
+              - tab "Nunjucks code for fluid width text input" [selected] [ref=e194] [cursor=pointer]:
+                - text: Nunjucks
+                - generic [ref=e195]: code for fluid width text input
+            - tabpanel [ref=e196]
+        - heading "Using hint text" [level=3] [ref=e197]
+        - paragraph [ref=e198]: Use hint text to give users help in context. For example, tell users where to find information or how you will use their data.
+        - generic [ref=e199]:
+          - link "Open this hint text text input example in new window" [ref=e200] [cursor=pointer]:
+            - /url: /design-example/components/text-input/hint-text?fullpage=undefined&blankpage=undefined
+            - text: Open this
+            - generic [ref=e201]: hint text text input
+            - text: example in new window
+          - iframe [ref=e203]:
+            - generic [ref=f5e2]:
+              - generic [ref=f5e3]: What is your HSE number?
+              - generic [ref=f5e4]: Your HSE number is a 10 digit number that you find on any letter the HSE has sent you. For example, 485 777 3456.
+              - textbox "What is your HSE number?" [ref=f5e5]
+          - generic [ref=e204]:
+            - tablist [ref=e205]:
+              - tab "HTML code for hint text text input" [selected] [ref=e206] [cursor=pointer]:
+                - text: HTML
+                - generic [ref=e207]: code for hint text text input
+              - tab "Nunjucks code for hint text text input" [selected] [ref=e208] [cursor=pointer]:
+                - text: Nunjucks
+                - generic [ref=e209]: code for hint text text input
+            - tabpanel [ref=e210]
+        - heading "Error messages" [level=3] [ref=e211]
+        - paragraph [ref=e212]: Style error messages like this.
+        - generic [ref=e213]:
+          - link "Open this error text input example in new window" [ref=e214] [cursor=pointer]:
+            - /url: /design-example/components/text-input/error?fullpage=undefined&blankpage=undefined
+            - text: Open this
+            - generic [ref=e215]: error text input
+            - text: example in new window
+          - iframe [ref=e217]:
+            - generic [ref=f6e2]:
+              - generic [ref=f6e3]: Full name
+              - generic [ref=f6e4]:
+                - generic [ref=f6e5]: "Error:"
+                - text: Enter your full name
+              - textbox "Full name" [ref=f6e6]
+          - generic [ref=e218]:
+            - tablist [ref=e219]:
+              - tab "HTML code for error text input" [selected] [ref=e220] [cursor=pointer]:
+                - text: HTML
+                - generic [ref=e221]: code for error text input
+              - tab "Nunjucks code for error text input" [selected] [ref=e222] [cursor=pointer]:
+                - text: Nunjucks
+                - generic [ref=e223]: code for error text input
+            - tabpanel [ref=e224]
+        - heading "Do not disable copy and paste" [level=3] [ref=e225]
+        - paragraph [ref=e226]: Users often need to copy and paste information into a text input, so do not stop them from doing this.
+        - paragraph [ref=e227]: "Updated: September 2023"
+  - contentinfo [ref=e228]:
+    - generic [ref=e230]:
+      - generic:
+        - heading "Support links" [level=2] [ref=e231]
+        - list [ref=e232]:
+          - listitem [ref=e233]:
+            - link "Cookies Statement" [ref=e234] [cursor=pointer]:
+              - /url: /cookies-statement
+          - listitem [ref=e235]:
+            - link "Cookies Settings" [ref=e236] [cursor=pointer]:
+              - /url: /cookies-settings
+          - listitem [ref=e237]:
+            - link "Accessibility Statement" [ref=e238] [cursor=pointer]:
+              - /url: /accessibility-statement
+          - listitem [ref=e239]:
+            - link "Privacy Statement" [ref=e240] [cursor=pointer]:
+              - /url: /privacy-statement
+          - listitem [ref=e241]:
+            - link "Disclaimer" [ref=e242] [cursor=pointer]:
+              - /url: /disclaimer
+          - listitem [ref=e243]:
+            - link "Site map" [ref=e244] [cursor=pointer]:
+              - /url: /site-map
+        - paragraph [ref=e245]: © Health Service Executive
