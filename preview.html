@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>SPEN Component Preview</title>
+
+    <!-- Load base GDS CSS then SPEN theme -->
+    <link rel="stylesheet" href="force-app/main/default/staticresources/govukcss-unminified.css">
+    <link rel="stylesheet" href="force-app/main/default/staticresources/spen_fonts.css">
+    <link rel="stylesheet" href="force-app/main/default/staticresources/spen_theme.css">
+
+    <style>
+        /* Preview page layout helpers */
+        .preview-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #CCCCCC;
+        }
+        .preview-section:last-child {
+            border-bottom: none;
+        }
+        .preview-label {
+            font-family: "IberPangea", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 15px;
+            padding: 4px 8px;
+            background: #eee;
+            display: inline-block;
+            border-radius: 3px;
+        }
+        .colour-swatch-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .colour-swatch {
+            text-align: center;
+            font-family: "IberPangea", sans-serif;
+            font-size: 12px;
+        }
+        .colour-swatch-block {
+            width: 80px;
+            height: 60px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 6px;
+        }
+
+        .spen-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            padding: 24px 0;
+        }
+        .spen-hero__content {
+            flex: 1 1 60%;
+        }
+        .spen-hero__title {
+            color: #007f33;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            margin: 0 0 12px 0;
+        }
+        .spen-hero__lead {
+            color: #1d1d1d;
+            font-size: 16px;
+            line-height: 25.6px;
+            margin: 0;
+        }
+        .spen-hero__media {
+            flex: 1 1 40%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .spen-search {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 420px;
+        }
+        .spen-search__label {
+            color: #1d1d1d;
+            font-size: 16px;
+            line-height: 25.6px;
+        }
+        .spen-search__input {
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            padding: 8px 6px;
+            background: #ffffff;
+            height: 48px;
+            display: flex;
+            align-items: center;
+        }
+        .spen-search__field {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+            line-height: 25.6px;
+            color: #1d1d1d;
+            width: 100%;
+        }
+        .spen-search__actions {
+            display: flex;
+            gap: 16px;
+        }
+        .spen-button {
+            background: #007f33;
+            color: #ffffff;
+            border: none;
+            border-radius: 9999px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25.6px;
+            padding: 16px 24px;
+            cursor: pointer;
+            flex: 1 1 auto;
+        }
+        .spen-button--ghost {
+            background: transparent;
+            color: #000000;
+        }
+
+        .spen-support {
+            padding: 32px 0;
+        }
+        .spen-support__header {
+            margin-bottom: 16px;
+        }
+        .spen-support__title {
+            color: #1d1d1d;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            padding-left: 14px;
+            margin: 0 0 8px 0;
+        }
+        .spen-support__lead {
+            color: #1d1d1d;
+            font-size: 16px;
+            line-height: 25.6px;
+            margin: 0;
+        }
+        .spen-support__grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .spen-support__card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px;
+            text-decoration: none;
+            color: #007f33;
+        }
+        .spen-support__card-title {
+            color: #1d1d1d;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;
+            margin: 0 0 6px 0;
+        }
+        .spen-support__card-text {
+            color: #1d1d1d;
+            font-size: 14px;
+            line-height: 22.4px;
+            margin: 0;
+        }
+        .spen-support__card-icon {
+            width: 32px;
+            height: 32px;
+            background: #e8f3ed;
+            border-radius: 50%;
+        }
+
+        .spen-preview-header-note {
+            color: #1d1d1d;
+            font-size: 14px;
+        }
+
+        .spen-footer__logo-wrap {
+            margin-bottom: 16px;
+        }
+        .spen-footer__logo {
+            height: 28px;
+            width: auto;
+            display: block;
+        }
+
+        .spen-priority {
+            display: flex;
+            gap: 16px;
+            background: #ddf6fe;
+            border: 0.5px solid #0792e5;
+            border-radius: 8px;
+            padding: 16px 24px;
+            align-items: center;
+        }
+        .spen-priority__icon img {
+            width: 40px;
+            height: 40px;
+        }
+        .spen-priority__title {
+            color: #1d1d1d;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+            margin: 0 0 8px 0;
+        }
+        .spen-priority__text {
+            color: #1d1d1d;
+            font-size: 16px;
+            line-height: 25.6px;
+            margin: 0 0 12px 0;
+        }
+        .spen-priority__actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .spen-priority__phone {
+            color: #1d1d1d;
+            font-weight: 600;
+        }
+        .spen-priority__link {
+            color: #007f33;
+            text-decoration: none;
+        }
+
+        .spen-contact {
+            background: #ffffff;
+            padding: 64px 0;
+        }
+        .spen-contact__grid {
+            display: grid;
+            gap: 32px;
+            padding: 0 64px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .spen-contact__title {
+            color: #007f33;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            margin: 0 0 12px 0;
+        }
+        .spen-contact__lead {
+            color: #1d1d1d;
+            font-size: 16px;
+            line-height: 25.6px;
+            margin: 0 0 20px 0;
+        }
+        .spen-contact__emergency-link {
+            color: #007f33;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .spen-contact__region {
+            margin-bottom: 16px;
+        }
+        .spen-contact__region-label {
+            display: block;
+            color: #1d1d1d;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .spen-contact__region-phone {
+            color: #1d1d1d;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        @media (max-width: 48rem) {
+            .spen-contact__grid {
+                padding: 0 24px;
+            }
+        }
+    </style>
+</head>
+<body class="govuk-template__body">
+
+    <!-- ============================================================
+         SKIP LINK
+         ============================================================ -->
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <div class="govuk-header" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+            <div class="govuk-header__logo">
+                <a href="#" class="govuk-header__link govuk-header__link--homepage">
+                    <img class="spen-header__logo" src="force-app/main/default/staticresources/spen_tri-colour.svg" alt="SP Energy Networks Logo">
+                </a>
+            </div>
+            <div class="govuk-header__content">
+                <span class="spen-preview-header-note">Header logo-only layout</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         PHASE BANNER
+         ============================================================ -->
+    <div class="govuk-width-container">
+        <div class="govuk-phase-banner">
+            <p class="govuk-phase-banner__content">
+                <strong class="govuk-tag govuk-phase-banner__content__tag">BETA</strong>
+                <span class="govuk-phase-banner__text">
+                    This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         MAIN CONTENT
+         ============================================================ -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper" id="main-content">
+
+            <h1 class="govuk-heading-xl">SPEN Component Preview</h1>
+            <p class="govuk-body-l">Selected GOV.UK Design System components and SPEN custom patterns.</p>
+
+
+            <!-- ==========================================================
+                 COLOUR PALETTE
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Colour Palette</span>
+                <h2 class="govuk-heading-l">Brand Colours</h2>
+                <div class="colour-swatch-row">
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#007F33;"></div>
+                        SP Green<br>#007F33
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#005C27;"></div>
+                        Dark Green<br>#005C27
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#2E844A;"></div>
+                        Header Green<br>#2E844A
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#FFB81C;"></div>
+                        Amber<br>#FFB81C
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#1D1D1D;"></div>
+                        Text<br>#1D1D1D
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#FDFDFD;"></div>
+                        Background<br>#FDFDFD
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#E0E0E0;"></div>
+                        Border<br>#E0E0E0
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#DDF6FE;"></div>
+                        Banner BG<br>#DDF6FE
+                    </div>
+                    <div class="colour-swatch">
+                        <div class="colour-swatch-block" style="background:#0792E5;"></div>
+                        Banner Border<br>#0792E5
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 TYPOGRAPHY
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Typography</span>
+                <h2 class="govuk-heading-xl">Heading XL</h2>
+                <h2 class="govuk-heading-l">Heading L</h2>
+                <h3 class="govuk-heading-m">Heading M</h3>
+                <h4 class="govuk-heading-s">Heading S</h4>
+                <p class="govuk-body-l">Body large - SP Energy Networks supports communities across Scotland, England and Wales.</p>
+                <p class="govuk-body">Body text - Use the postcode search to find and track power cuts in your area.</p>
+                <p class="govuk-body-s">Body small - Emergency number: 105.</p>
+                <p class="govuk-body">
+                    <a href="#" class="govuk-link">Standard link</a> |
+                    <a href="#" class="govuk-link govuk-link--no-visited-state">No-visited link</a>
+                </p>
+            </div>
+
+            <!-- ==========================================================
+                 HERO + SEARCH
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Hero + Search</span>
+                <section class="spen-hero">
+                    <div class="spen-hero__content">
+                        <h2 class="spen-hero__title">Search, track or report a power cut</h2>
+                        <p class="spen-hero__lead">The areas we support are Central and Southern Scotland, North Wales, Merseyside, Cheshire and North Shropshire.</p>
+                    </div>
+                    <div class="spen-hero__media">
+                        <div style="width: 220px; height: 120px; background: #e8f3ed; border-radius: 12px;"></div>
+                    </div>
+                </section>
+                <section class="spen-search">
+                    <label class="spen-search__label">Enter a postcode</label>
+                    <div class="spen-search__input">
+                        <input class="spen-search__field" type="text" placeholder="e.g., SW1A 1AA">
+                    </div>
+                    <div class="spen-search__actions">
+                        <button type="button" class="spen-button">Power cuts list</button>
+                        <button type="button" class="spen-button spen-button--ghost">Power cuts map</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ==========================================================
+                 SUPPORT CARDS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Support Cards</span>
+                <section class="spen-support">
+                    <div class="spen-support__header">
+                        <h2 class="spen-support__title">Power cuts help and support</h2>
+                        <p class="spen-support__lead">Have a look at our power cut support pages to learn more about what to do, how to prepare and how we can help</p>
+                    </div>
+                    <div class="spen-support__grid">
+                        <a class="spen-support__card" href="#">
+                            <div class="spen-support__card-body">
+                                <h3 class="spen-support__card-title">What to do in a power cut</h3>
+                                <p class="spen-support__card-text">Tips on staying safe in a power cut.</p>
+                            </div>
+                            <div class="spen-support__card-icon"></div>
+                        </a>
+                        <a class="spen-support__card" href="#">
+                            <div class="spen-support__card-body">
+                                <h3 class="spen-support__card-title">A little extra support?</h3>
+                                <p class="spen-support__card-text">Find out about extra support and our Priority Services Register.</p>
+                            </div>
+                            <div class="spen-support__card-icon"></div>
+                        </a>
+                        <a class="spen-support__card" href="#">
+                            <div class="spen-support__card-body">
+                                <h3 class="spen-support__card-title">Preparing for a power cut</h3>
+                                <p class="spen-support__card-text">Information on how to prepare for a power cut</p>
+                            </div>
+                            <div class="spen-support__card-icon"></div>
+                        </a>
+                        <a class="spen-support__card" href="#">
+                            <div class="spen-support__card-body">
+                                <h3 class="spen-support__card-title">Preparing your business for a power cut</h3>
+                                <p class="spen-support__card-text">Information on preparing your business for a power cut</p>
+                            </div>
+                            <div class="spen-support__card-icon"></div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ==========================================================
+                 PRIORITY SERVICE BANNER
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Priority Service</span>
+                <section class="spen-priority">
+                    <div class="spen-priority__icon">
+                        <div style="width: 40px; height: 40px; background: #ffffff; border-radius: 50%; border: 1px solid #0792e5;"></div>
+                    </div>
+                    <div class="spen-priority__content">
+                        <h2 class="spen-priority__title">Become a priority service customer</h2>
+                        <p class="spen-priority__text">If you need a little extra help and would like to be added to our Priority Service Register, you can complete a form, or you can call us.</p>
+                        <div class="spen-priority__actions">
+                            <span class="spen-priority__phone">0330 10 10 167</span>
+                            <a class="spen-priority__link" href="#">Online form</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ==========================================================
+                 CONTACT SECTION
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Contact</span>
+                <section class="spen-contact">
+                    <div class="spen-contact__grid">
+                        <div class="spen-contact__left">
+                            <h2 class="spen-contact__title">Contact us</h2>
+                            <p class="spen-contact__lead">Can’t find what you’re looking for? Our team is ready to help.</p>
+                            <div class="spen-contact__emergency">
+                                <a class="spen-contact__emergency-link" href="tel:105">Call 105</a>
+                            </div>
+                        </div>
+                        <div class="spen-contact__right">
+                            <div class="spen-contact__region">
+                                <span class="spen-contact__region-label">Scotland</span>
+                                <a class="spen-contact__region-phone" href="tel:08003891785">0800 389 1785</a>
+                            </div>
+                            <div class="spen-contact__region">
+                                <span class="spen-contact__region-label">England and Wales</span>
+                                <a class="spen-contact__region-phone" href="tel:08003891783">0800 389 1783</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ==========================================================
+                 CHECKBOXES + RADIOS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Form Inputs</span>
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h3 class="govuk-fieldset__heading">Contact preferences</h3>
+                    </legend>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="contact-email" name="contact" type="checkbox">
+                            <label class="govuk-label govuk-checkboxes__label" for="contact-email">Email</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="contact-sms" name="contact" type="checkbox">
+                            <label class="govuk-label govuk-checkboxes__label" for="contact-sms">SMS</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="govuk-fieldset" style="margin-top:16px;">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h3 class="govuk-fieldset__heading">Preferred update type</h3>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="update-text" name="update" type="radio" checked>
+                            <label class="govuk-label govuk-radios__label" for="update-text">Text updates</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="update-email" name="update" type="radio">
+                            <label class="govuk-label govuk-radios__label" for="update-email">Email updates</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- ==========================================================
+                 BREADCRUMBS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Breadcrumbs</span>
+                <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+                    <ol class="govuk-breadcrumbs__list">
+                        <li class="govuk-breadcrumbs__list-item">
+                            <a class="govuk-breadcrumbs__link" href="#">Home</a>
+                        </li>
+                        <li class="govuk-breadcrumbs__list-item">
+                            <a class="govuk-breadcrumbs__link" href="#">Energy Services</a>
+                        </li>
+                        <li class="govuk-breadcrumbs__list-item">
+                            <a class="govuk-breadcrumbs__link" href="#">My Account</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 BACK LINK
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Back Link</span><br>
+                <a href="#" class="govuk-back-link">Back</a>
+            </div>
+
+
+            <!-- ==========================================================
+                 BUTTONS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Buttons</span>
+                <h2 class="govuk-heading-l">Buttons</h2>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Primary button
+                </button>
+                <br>
+                <button type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Secondary button
+                </button>
+                <br>
+                <button type="button" class="govuk-button govuk-button--warning" data-module="govuk-button">
+                    Warning button
+                </button>
+                <br>
+                <button type="button" class="govuk-button" data-module="govuk-button" disabled>
+                    Disabled button
+                </button>
+                <br>
+                <a href="#" role="button" class="govuk-button govuk-button--start" data-module="govuk-button">
+                    Start now
+                    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                    </svg>
+                </a>
+            </div>
+
+
+            <!-- ==========================================================
+                 TEXT INPUT
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Text Input</span>
+                <h2 class="govuk-heading-l">Form Components</h2>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="account-ref">
+                        Account reference number
+                    </label>
+                    <div id="account-hint" class="govuk-hint">
+                        This is the 10-digit number on your energy bill, for example 1234567890
+                    </div>
+                    <input class="govuk-input govuk-input--width-10" id="account-ref" name="account-ref" type="text" aria-describedby="account-hint">
+                </div>
+
+                <!-- With error -->
+                <div class="govuk-form-group govuk-form-group--error">
+                    <label class="govuk-label govuk-label--m" for="postcode">
+                        Postcode
+                    </label>
+                    <div id="postcode-hint" class="govuk-hint">
+                        For example, G2 1DY
+                    </div>
+                    <span id="postcode-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter a valid UK postcode
+                    </span>
+                    <input class="govuk-input govuk-input--width-5 govuk-input--error" id="postcode" name="postcode" type="text" aria-describedby="postcode-hint postcode-error">
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 TEXTAREA
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Textarea</span>
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-label--m" for="more-detail">
+                        Can you provide more detail?
+                    </label>
+                    <div id="more-detail-hint" class="govuk-hint">
+                        Please describe the issue you are experiencing with your energy supply.
+                    </div>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 DATE INPUT
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Date Input</span>
+                <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">When did you move into the property?</h2>
+                    </legend>
+                    <div id="move-date-hint" class="govuk-hint">
+                        For example, 27 3 2024
+                    </div>
+                    <div class="govuk-date-input" id="move-date">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="move-date-day">Day</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="move-date-day" name="move-date-day" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="move-date-month">Month</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="move-date-month" name="move-date-month" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="move-date-year">Year</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="move-date-year" name="move-date-year" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- ==========================================================
+                 SELECT
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Select</span>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="tariff">
+                        Choose your tariff
+                    </label>
+                    <select class="govuk-select" id="tariff" name="tariff">
+                        <option value="">Select a tariff</option>
+                        <option value="fixed">Fixed Rate 12 Month</option>
+                        <option value="variable">Standard Variable</option>
+                        <option value="green">100% Green Energy</option>
+                        <option value="ev">EV Smart Tariff</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 RADIOS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Radios</span>
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">How do you want to pay?</h2>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="payment-1" name="payment" type="radio" value="dd">
+                            <label class="govuk-label govuk-radios__label" for="payment-1">Direct debit</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="payment-2" name="payment" type="radio" value="prepay">
+                            <label class="govuk-label govuk-radios__label" for="payment-2">Prepayment meter</label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="payment-3" name="payment" type="radio" value="card">
+                            <label class="govuk-label govuk-radios__label" for="payment-3">Pay on receipt of bill</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- ==========================================================
+                 CHECKBOXES
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Checkboxes</span>
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">Which services do you need?</h2>
+                    </legend>
+                    <div id="services-hint" class="govuk-hint">
+                        Select all that apply.
+                    </div>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="service-1" name="services" type="checkbox" value="electricity">
+                            <label class="govuk-label govuk-checkboxes__label" for="service-1">Electricity</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="service-2" name="services" type="checkbox" value="gas">
+                            <label class="govuk-label govuk-checkboxes__label" for="service-2">Gas</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="service-3" name="services" type="checkbox" value="ev">
+                            <label class="govuk-label govuk-checkboxes__label" for="service-3">EV charging</label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="service-4" name="services" type="checkbox" value="solar">
+                            <label class="govuk-label govuk-checkboxes__label" for="service-4">Solar panels</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!-- ==========================================================
+                 ERROR SUMMARY
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Error Summary</span>
+                <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li><a href="#postcode">Enter a valid UK postcode</a></li>
+                            <li><a href="#account-ref">Enter your account reference number</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 TAGS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Tags</span>
+                <h2 class="govuk-heading-l">Tags</h2>
+                <strong class="govuk-tag">Active</strong>&nbsp;
+                <strong class="govuk-tag govuk-tag--grey">Inactive</strong>
+            </div>
+
+
+            <!-- ==========================================================
+                 NOTIFICATION BANNER
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Notification Banner</span>
+                <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                    <div class="govuk-notification-banner__header">
+                        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                            Important
+                        </h2>
+                    </div>
+                    <div class="govuk-notification-banner__content">
+                        <p class="govuk-notification-banner__heading">
+                            Your tariff is due for renewal on 15 March 2026.
+                            <a class="govuk-notification-banner__link" href="#">Review your options</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" data-module="govuk-notification-banner">
+                    <div class="govuk-notification-banner__header">
+                        <h2 class="govuk-notification-banner__title">
+                            Success
+                        </h2>
+                    </div>
+                    <div class="govuk-notification-banner__content">
+                        <h3 class="govuk-notification-banner__heading">
+                            Your meter reading has been submitted
+                        </h3>
+                        <p class="govuk-body">We'll update your account within 2 working days.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 PANEL (Confirmation)
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Panel</span>
+                <div class="govuk-panel govuk-panel--confirmation" role="alert">
+                    <h1 class="govuk-panel__title">Tariff switch complete</h1>
+                    <div class="govuk-panel__body">
+                        Your new tariff reference<br><strong>SP-2026-04821</strong>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 INSET TEXT
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Inset Text</span>
+                <div class="govuk-inset-text">
+                    If you have a prepayment meter, you can top up online through your ScottishPower account or at any PayPoint location.
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 WARNING TEXT
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Warning Text</span>
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        If you do not submit a meter reading, your bill will be estimated and may be inaccurate.
+                    </strong>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 DETAILS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Details</span>
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            How to find your meter serial number
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        Your meter serial number (MSN) is usually printed on the front of your meter.
+                        It's a mix of letters and numbers, typically 10 characters long. You can also
+                        find it on a recent energy bill or in your online account.
+                    </div>
+                </details>
+            </div>
+
+
+            <!-- ==========================================================
+                 ACCORDION
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Accordion</span>
+                <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-preview">
+                    <div class="govuk-accordion__section govuk-accordion__section--expanded">
+                        <div class="govuk-accordion__section-header">
+                            <h2 class="govuk-accordion__section-heading">
+                                <span class="govuk-accordion__section-button" id="accordion-heading-1">
+                                    Understanding your bill
+                                </span>
+                            </h2>
+                            <div class="govuk-accordion__section-summary govuk-body" id="accordion-summary-1">
+                                A breakdown of the charges on your energy bill
+                            </div>
+                        </div>
+                        <div id="accordion-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-1">
+                            <p class="govuk-body">Your energy bill is made up of several components including the unit rate,
+                            standing charge, VAT at 5%, and any applicable discounts from your tariff.</p>
+                        </div>
+                    </div>
+                    <div class="govuk-accordion__section">
+                        <div class="govuk-accordion__section-header">
+                            <h2 class="govuk-accordion__section-heading">
+                                <span class="govuk-accordion__section-button" id="accordion-heading-2">
+                                    Switching tariff
+                                </span>
+                            </h2>
+                            <div class="govuk-accordion__section-summary govuk-body" id="accordion-summary-2">
+                                How to change your current energy tariff
+                            </div>
+                        </div>
+                        <div id="accordion-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-2">
+                            <p class="govuk-body">You can switch tariff at any time through your online account. If you're
+                            currently on a fixed tariff, early exit fees may apply.</p>
+                        </div>
+                    </div>
+                    <div class="govuk-accordion__section">
+                        <div class="govuk-accordion__section-header">
+                            <h2 class="govuk-accordion__section-heading">
+                                <span class="govuk-accordion__section-button" id="accordion-heading-3">
+                                    Smart meter installation
+                                </span>
+                            </h2>
+                        </div>
+                        <div id="accordion-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-heading-3">
+                            <p class="govuk-body">Smart meters are available free of charge. Book an installation through
+                            your online account or by calling our smart meter team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 TABS
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Tabs</span>
+                <div class="govuk-tabs" data-module="govuk-tabs">
+                    <h2 class="govuk-tabs__title">Usage history</h2>
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                            <a class="govuk-tabs__tab" href="#electricity-tab">Electricity</a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab" href="#gas-tab">Gas</a>
+                        </li>
+                    </ul>
+                    <div class="govuk-tabs__panel" id="electricity-tab">
+                        <h2 class="govuk-heading-m">Electricity usage</h2>
+                        <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header">Month</th>
+                                    <th scope="col" class="govuk-table__header">kWh used</th>
+                                    <th scope="col" class="govuk-table__header">Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">January 2026</td>
+                                    <td class="govuk-table__cell">425</td>
+                                    <td class="govuk-table__cell">&pound;127.50</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">December 2025</td>
+                                    <td class="govuk-table__cell">380</td>
+                                    <td class="govuk-table__cell">&pound;114.00</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">November 2025</td>
+                                    <td class="govuk-table__cell">310</td>
+                                    <td class="govuk-table__cell">&pound;93.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="gas-tab">
+                        <h2 class="govuk-heading-m">Gas usage</h2>
+                        <p class="govuk-body">Gas usage data for the selected period.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 TABLE
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Table</span>
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m">Tariff comparison</caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Tariff</th>
+                            <th scope="col" class="govuk-table__header">Unit rate (p/kWh)</th>
+                            <th scope="col" class="govuk-table__header">Standing charge (p/day)</th>
+                            <th scope="col" class="govuk-table__header">Contract length</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Fixed Rate 12</td>
+                            <td class="govuk-table__cell">24.5p</td>
+                            <td class="govuk-table__cell">53.35p</td>
+                            <td class="govuk-table__cell">12 months</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Standard Variable</td>
+                            <td class="govuk-table__cell">27.3p</td>
+                            <td class="govuk-table__cell">53.35p</td>
+                            <td class="govuk-table__cell">Rolling</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">100% Green</td>
+                            <td class="govuk-table__cell">25.1p</td>
+                            <td class="govuk-table__cell">53.35p</td>
+                            <td class="govuk-table__cell">24 months</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- ==========================================================
+                 SUMMARY LIST
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Summary List</span>
+                <h2 class="govuk-heading-l">Account details</h2>
+                <dl class="govuk-summary-list">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Name</dt>
+                        <dd class="govuk-summary-list__value">Eilidh MacGregor</dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Address</dt>
+                        <dd class="govuk-summary-list__value">42 Buchanan Street<br>Glasgow<br>G1 3JN</dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Tariff</dt>
+                        <dd class="govuk-summary-list__value">Fixed Rate 12 Month</dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> tariff</span></a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">Payment method</dt>
+                        <dd class="govuk-summary-list__value">Direct debit</dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> payment method</span></a>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+
+
+            <!-- ==========================================================
+                 COOKIE BANNER
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Cookie Banner</span>
+                <div class="govuk-cookie-banner" role="region" aria-label="Cookies on ScottishPower">
+                    <div class="govuk-cookie-banner__message govuk-width-container">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-two-thirds">
+                                <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on ScottishPower</h2>
+                                <div class="govuk-cookie-banner__content">
+                                    <p class="govuk-body">We use cookies to make this service work and collect analytics information. To accept or reject cookies, turn on JavaScript in your browser settings or reload this page.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="govuk-button-group">
+                            <button type="button" class="govuk-button" data-module="govuk-button">Accept analytics cookies</button>
+                            <button type="button" class="govuk-button" data-module="govuk-button">Reject analytics cookies</button>
+                            <a class="govuk-link" href="#">View cookies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==========================================================
+                 SEPARATOR
+                 ========================================================== -->
+            <div class="preview-section">
+                <span class="preview-label">Separator / Section Break</span>
+                <p class="govuk-body">Content above the separator.</p>
+                <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+                <p class="govuk-body">Content below the separator.</p>
+            </div>
+
+        </main>
+    </div>
+
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="govuk-footer" role="contentinfo">
+        <div class="govuk-width-container">
+            <div class="spen-footer__logo-wrap">
+                <img class="spen-footer__logo" src="force-app/main/default/staticresources/spen_green.svg" alt="SP Energy Networks Logo">
+            </div>
+            <div class="govuk-footer__navigation">
+                <div style="width:50%; display:inline-block; vertical-align:top;">
+                    <div class="govuk-footer__section">
+                        <h2 class="govuk-footer__heading govuk-heading-m">Services</h2>
+                        <ul class="govuk-footer__list">
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">Submit meter reading</a></li>
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">View my bills</a></li>
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">Switch tariff</a></li>
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">Book smart meter</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width:40%; display:inline-block; vertical-align:top;">
+                    <div class="govuk-footer__section">
+                        <h2 class="govuk-footer__heading govuk-heading-m">Support</h2>
+                        <ul class="govuk-footer__list">
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">Contact us</a></li>
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">Help centre</a></li>
+                            <li class="govuk-footer__list-item"><a class="govuk-footer__link" href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="govuk-footer__section-break">
+            <div class="govuk-footer__meta">
+                <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                    <ul class="govuk-footer__inline-list">
+                        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Privacy policy</a></li>
+                        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Terms and conditions</a></li>
+                        <li class="govuk-footer__inline-list-item"><a class="govuk-footer__link" href="#">Cookie policy</a></li>
+                    </ul>
+                    <span class="govuk-footer__licence-description">
+                        &copy; ScottishPower Ltd. All rights reserved. ScottishPower is part of the Iberdrola Group.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

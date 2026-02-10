@@ -1,0 +1,232 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+
+    <c-gov-skip-link target-anchor="main-content"></c-gov-skip-link>
+
+    <c-gov-header
+        header-label="HSE"
+        service-name="Component Showcase"
+        service-u-r-l="#">
+    </c-gov-header>
+
+    <div class="govuk-width-container">
+        <c-gov-phase-banner
+            phase-text="Beta"
+            body-text="Demonstrating 38+ components ready for HSE Design System conversion">
+        </c-gov-phase-banner>
+    </div>
+
+    <main id="main-content" class="govuk-main-wrapper">
+        <div class="govuk-width-container">
+
+            <h1 class="govuk-heading-xl">HSE Component Showcase</h1>
+            <p class="govuk-body-l">
+                Interactive preview of all components before HSE Design System migration
+            </p>
+
+            <div class="govuk-inset-text">
+                <p><strong>Status:</strong> GOV.UK components mapped to HSE equivalents</p>
+                <p><strong>Target:</strong> <a href="https://service-manual.hse.ie/design-system" class="govuk-link">HSE Design System</a></p>
+                <p><strong>Class Pattern:</strong> <code>govuk-*</code> → <code>hse-*</code></p>
+            </div>
+
+            <c-gov-tabs title="Components">
+                <!-- FORM COMPONENTS -->
+                <div>
+                    <h2 class="govuk-heading-l">Form Components (9)</h2>
+
+                    <h3 class="govuk-heading-m">Text Input</h3>
+                    <p class="govuk-body-s"><code>govuk-input</code> → <code>hse-input</code></p>
+                    <c-gov-text-input label="Full name" hint-text="Enter your first and last name"></c-gov-text-input>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">Text Area</h3>
+                    <p class="govuk-body-s"><code>govuk-textarea</code> → <code>hse-textarea</code></p>
+                    <c-gov-text-area label="Additional details" row-count="5"></c-gov-text-area>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">Select</h3>
+                    <p class="govuk-body-s"><code>govuk-select</code> → <code>hse-select</code></p>
+                    <c-gov-select
+                        label="Region"
+                        option-labels="Dublin,Cork,Galway"
+                        option-values="Dublin,Cork,Galway">
+                    </c-gov-select>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">Radios</h3>
+                    <p class="govuk-body-s"><code>govuk-radios</code> → <code>hse-radios</code></p>
+                    <c-gov-radios
+                        question-label="Contact preference"
+                        radio-labels="Email,Phone,Text"
+                        radio-values="email,phone,text">
+                    </c-gov-radios>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">Checkboxes</h3>
+                    <p class="govuk-body-s"><code>govuk-checkboxes</code> → <code>hse-checkboxes</code></p>
+                    <c-gov-checkboxes
+                        headinglabel="Interests"
+                        labels="Healthcare,Technology,Education">
+                    </c-gov-checkboxes>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">Date Input</h3>
+                    <p class="govuk-body-s"><code>govuk-date-input</code> → <code>hse-date-input</code></p>
+                    <c-gov-date label="Date of birth" hint-text="For example, 15 3 1984"></c-gov-date>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">File Upload</h3>
+                    <p class="govuk-body-s"><code>govuk-file-upload</code> → <code>hse-file-upload</code></p>
+                    <c-gov-file-upload file-upload-label="Upload document" accepted-formats=".pdf,.doc"></c-gov-file-upload>
+
+                    <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+                    <h3 class="govuk-heading-m">Error Summary</h3>
+                    <p class="govuk-body-s"><code>govuk-error-summary</code> → <code>hse-error-summary</code></p>
+                    <c-gov-error-messages></c-gov-error-messages>
+                </div>
+            </c-gov-tabs>
+
+            <c-gov-separator size="large" is-visible="true"></c-gov-separator>
+
+            <!-- NAVIGATION -->
+            <h2 class="govuk-heading-l">Navigation (7)</h2>
+
+            <h3 class="govuk-heading-m">Back Link</h3>
+            <c-gov-back-link back-link-label="Back" destination-page-name="Home"></c-gov-back-link>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Breadcrumbs</h3>
+            <c-gov-breadcrumbs
+                page-labels="Home;Services;Care"
+                page-a-p-i-names="Home;Services;Care">
+            </c-gov-breadcrumbs>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Start Button</h3>
+            <c-gov-start-button label="Start now" link="Home"></c-gov-start-button>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Navigation Buttons</h3>
+            <p class="govuk-body-s"><strong>Note:</strong> HSE uses purple for primary (not green)</p>
+            <c-gov-navigation-buttons
+                button-labels-string="Back,Continue"
+                button-actions-string="BACK,NEXT"
+                button-variants-string="SECONDARY,BRAND"
+                button-alignments-string="LEFT,RIGHT">
+            </c-gov-navigation-buttons>
+
+            <c-gov-separator size="large" is-visible="true"></c-gov-separator>
+
+            <!-- CONTENT -->
+            <h2 class="govuk-heading-l">Content (9)</h2>
+
+            <h3 class="govuk-heading-m">Accordion → HSE Expander</h3>
+            <p class="govuk-body-s"><strong>Name Change:</strong> <code>govuk-accordion</code> → <code>hse-expander</code></p>
+            <c-gov-accordion
+                section-labels="What is HSE?;Services;Contact"
+                section-contents="Health Service Executive|Primary care services|Contact information">
+            </c-gov-accordion>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Details</h3>
+            <c-gov-details summary-text="More information" details-text="Additional details here"></c-gov-details>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Inset Text</h3>
+            <c-gov-inset-text inset-text="Important information for users"></c-gov-inset-text>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Table</h3>
+            <c-gov-table
+                caption-text="Service wait times"
+                column-headers="Service,Location,Wait"
+                column-types="text,text,text"
+                column-data="GP|Dublin|1 week;Specialist|Cork|3 weeks">
+            </c-gov-table>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Warning Text → HSE Warning Callout</h3>
+            <p class="govuk-body-s"><strong>Name Change:</strong> <code>govuk-warning-text</code> → <code>hse-warning-callout</code></p>
+            <c-gov-warning-text warning-text="Important warning message"></c-gov-warning-text>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Summary List</h3>
+            <c-gov-summary
+                title="Check answers"
+                confirmation-labels={summaryLabels}
+                confirmation-values={summaryValues}
+                confirmation-destinations={summaryDestinations}>
+            </c-gov-summary>
+
+            <c-gov-separator size="large" is-visible="true"></c-gov-separator>
+
+            <!-- NOTIFICATIONS -->
+            <h2 class="govuk-heading-l">Notifications (4)</h2>
+
+            <h3 class="govuk-heading-m">Notification Banner</h3>
+            <p class="govuk-body-s"><strong>Status:</strong> ⚠️ No HSE equivalent - custom needed</p>
+            <c-gov-notification-banner heading-text="Update" body-text="Service update message"></c-gov-notification-banner>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Panel</h3>
+            <p class="govuk-body-s"><strong>Status:</strong> ⚠️ No HSE equivalent - custom needed</p>
+            <c-gov-panel title-text="Success" body-text="Application complete"></c-gov-panel>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Tag</h3>
+            <p class="govuk-body-s"><strong>Status:</strong> ⚠️ No HSE equivalent - custom needed</p>
+            <c-gov-tag tag-text="Beta" tag-text-colour="Blue"></c-gov-tag>
+
+            <c-gov-separator size="medium" is-visible="true"></c-gov-separator>
+
+            <h3 class="govuk-heading-m">Phase Banner</h3>
+            <p class="govuk-body-s"><strong>Status:</strong> ⚠️ No HSE equivalent - custom needed</p>
+            <c-gov-phase-banner phase-text="Alpha" body-text="This is a new service"></c-gov-phase-banner>
+
+            <c-gov-separator size="large" is-visible="true"></c-gov-separator>
+
+            <!-- SUMMARY -->
+            <div class="govuk-inset-text">
+                <h2 class="govuk-heading-m">Conversion Summary</h2>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><strong>34 components</strong> have direct HSE equivalents</li>
+                    <li><strong>2 components</strong> have name changes (Accordion→Expander, Warning text→Warning callout)</li>
+                    <li><strong>6 components</strong> need custom implementation (Phase Banner, Panel, Tabs, Tag, Cookie Banner, Notification Banner)</li>
+                    <li><strong>Class pattern:</strong> Simple <code>govuk-*</code> → <code>hse-*</code> replacement</li>
+                    <li><strong>Color change:</strong> Primary green → purple (#5F3DC4)</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <c-gov-footer
+        secondary-navigation-required
+        section-names="Services;About"
+        navigation-names="Hospitals|Clinics;Contact"
+        navigation-links="#|#;#"
+        column-types="2;1"
+        metalink-names="Privacy;Accessibility"
+        metalink-u-r-l="#;#"
+        metalinks-required
+        crown-logo-required>
+    </c-gov-footer>
+</template>
