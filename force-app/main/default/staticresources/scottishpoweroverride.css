@@ -1,23 +1,31 @@
 /**
- * Scottish Power Brand Override
+ * SP Energy Networks Brand Override
  * Overrides GOV.UK Design System colours, fonts, and branding
- * to align with the ScottishPower / Iberdrola visual identity.
+ * to align with the SP Energy Networks visual identity.
  *
- * Colour Mapping:
- *   GDS Blue (#1d70b8)       -> SP Green (#007F33)
- *   GDS Dark Blue (#003078)  -> SP Dark Green (#005C27)
- *   GDS Green (#00703c)      -> SP Green (#007F33)
- *   GDS Black (#0b0c0c)      -> SP Near-Black (#1A1A1A)
- *   GDS Focus Yellow (#fd0)  -> SP Amber (#FFB81C)
- *   GDS Light Grey (#f3f2f1) -> SP Light Grey (#F5F5F5)
- *   GDS Border (#b1b4b6)     -> SP Border (#CCCCCC)
- *   GDS Visited (#4c2c92)    -> SP Visited (#4A0E6F)
- *   Header Background        -> SP Navy (#002F6C)
+ * Based on SP Energy Networks brand (brandfetch.com/spenergynetworks.co.uk):
+ *   Primary Green: #6A9319 ("Vida Loca")
+ *   Black: #000000
+ *   White: #FFFFFF
+ *
+ * Derived Palette:
+ *   SPEN Green (#6A9319)         - primary actions, links, buttons
+ *   SPEN Dark Green (#4D6D10)    - hover states
+ *   SPEN Darkest Green (#354B0B) - button shadows, pressed states
+ *   Dark Charcoal (#1D1D1B)      - header background (near-black)
+ *   SPEN Light Green (#EAF2D8)   - subtle green tint for highlights
+ *   Focus Amber (#FFB81C)        - focus rings (Iberdrola sun/energy)
+ *   Error Red (#D4351C)          - errors (kept for accessibility)
+ *   Light Grey (#F5F5F5)         - footer, secondary elements
+ *   Border Grey (#D5D5D5)        - borders, dividers
+ *   Text (#1D1D1B)               - body text
+ *   Visited (#4A0E6F)            - visited links
  */
+
 
 /* ==========================================================================
    FONT OVERRIDE
-   Replace GDS Transport with a clean, modern sans-serif stack
+   Replace GDS Transport with Open Sans stack — clean, modern, utility-grade
    ========================================================================== */
 
 .govuk-link,
@@ -77,8 +85,10 @@
 .govuk-textarea,
 .govuk-radios__label,
 .govuk-checkboxes__label,
-.govuk-date-input__label {
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+.govuk-date-input__label,
+.govuk-cookie-banner__heading,
+.govuk-cookie-banner__content {
+  font-family: "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 
@@ -88,7 +98,7 @@
 
 .app-prose-scope a:link,
 .govuk-link:link {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .app-prose-scope a:visited,
@@ -98,24 +108,24 @@
 
 .app-prose-scope a:hover,
 .govuk-link:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-link--no-visited-state:link,
 .govuk-link--no-visited-state:visited {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-link--no-visited-state:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .app-prose-scope a:focus,
 .govuk-link:focus {
-  color: #1A1A1A;
+  color: #1D1D1B;
   background-color: #FFB81C;
-  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
-  box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1D1D1B;
+  box-shadow: 0 -2px #FFB81C, 0 4px #1D1D1B;
 }
 
 
@@ -133,13 +143,13 @@
 }
 
 .govuk-radios__input:focus + .govuk-radios__label::before {
-  border-color: #1A1A1A;
+  border-color: #1D1D1B;
   -webkit-box-shadow: 0 0 0 4px #FFB81C;
   box-shadow: 0 0 0 4px #FFB81C;
 }
 
 .govuk-checkboxes__input:focus + .govuk-checkboxes__label::before {
-  border-color: #1A1A1A;
+  border-color: #1D1D1B;
   -webkit-box-shadow: 0 0 0 3px #FFB81C;
   box-shadow: 0 0 0 3px #FFB81C;
 }
@@ -148,37 +158,37 @@
   outline: 3px solid #FFB81C;
   outline-offset: 0;
   background-color: #FFB81C;
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
 /* ==========================================================================
-   HEADER
+   HEADER — dark charcoal with SPEN green accent
    ========================================================================== */
 
 .govuk-header {
-  background: #002F6C;
-  border-bottom-color: #fff;
+  background: #1D1D1B;
+  border-bottom: 10px solid #fff;
 }
 
 .govuk-header__container {
-  border-bottom-color: #007F33;
+  border-bottom: 10px solid #6A9319;
 }
 
 .govuk-header__container--full-width {
-  border-color: #007F33;
+  border-color: #6A9319;
 }
 
 .govuk-header__link:focus {
-  color: #1A1A1A;
+  color: #1D1D1B;
   background-color: #FFB81C;
-  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
-  box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1D1D1B;
+  box-shadow: 0 -2px #FFB81C, 0 4px #1D1D1B;
 }
 
 .govuk-header__menu-button {
   color: #fff;
-  border-color: #007F33;
+  border-color: #6A9319;
 }
 
 .govuk-header__menu-button:hover {
@@ -186,7 +196,7 @@
 }
 
 .govuk-header__menu-button:focus {
-  color: #1A1A1A;
+  color: #1D1D1B;
   background-color: #FFB81C;
   border-color: #FFB81C;
 }
@@ -199,50 +209,60 @@
 
 
 /* ==========================================================================
-   FOOTER
+   FOOTER — dark charcoal to match header, white text/links
    ========================================================================== */
 
 .govuk-footer {
-  background: #F5F5F5;
-  border-top-color: #CCCCCC;
-  color: #1A1A1A;
+  background: #1D1D1B;
+  border-top: 4px solid #6A9319;
+  color: #FFFFFF;
 }
 
 .govuk-footer__link:active,
 .govuk-footer__link:hover,
 .govuk-footer__link:link,
 .govuk-footer__link:visited {
-  color: #1A1A1A;
+  color: #FFFFFF;
+}
+
+.govuk-footer__link:hover {
+  color: #D5D5D5;
 }
 
 .govuk-footer__link:focus {
-  color: #1A1A1A;
+  color: #1D1D1B;
   background-color: #FFB81C;
-  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
-  box-shadow: 0 -2px #FFB81C, 0 4px #1A1A1A;
+  -webkit-box-shadow: 0 -2px #FFB81C, 0 4px #1D1D1B;
+  box-shadow: 0 -2px #FFB81C, 0 4px #1D1D1B;
 }
 
 .govuk-footer__section-break {
-  border-bottom-color: #CCCCCC;
+  border-bottom-color: #3A3A3A;
 }
 
 .govuk-footer__heading {
-  border-bottom-color: #CCCCCC;
+  border-bottom-color: #3A3A3A;
+  color: #FFFFFF;
+}
+
+.govuk-footer__licence-description {
+  color: #D5D5D5;
 }
 
 
 /* ==========================================================================
-   BUTTONS
+   BUTTONS — SPEN green, rounded corners for modern utility look
    ========================================================================== */
 
 .govuk-button {
-  background-color: #007F33;
-  -webkit-box-shadow: 0 2px 0 #003D15;
-  box-shadow: 0 2px 0 #003D15;
+  background-color: #6A9319;
+  -webkit-box-shadow: 0 2px 0 #354B0B;
+  box-shadow: 0 2px 0 #354B0B;
+  border-radius: 4px;
 }
 
 .govuk-button:hover {
-  background-color: #005C27;
+  background-color: #4D6D10;
 }
 
 .govuk-button:focus {
@@ -253,29 +273,30 @@
 
 .govuk-button:focus:not(:active):not(:hover) {
   border-color: #FFB81C;
-  color: #1A1A1A;
+  color: #1D1D1B;
   background-color: #FFB81C;
-  -webkit-box-shadow: 0 2px 0 #1A1A1A;
-  box-shadow: 0 2px 0 #1A1A1A;
+  -webkit-box-shadow: 0 2px 0 #1D1D1B;
+  box-shadow: 0 2px 0 #1D1D1B;
 }
 
 .govuk-button--disabled:hover,
 .govuk-button[disabled="disabled"]:hover,
 .govuk-button[disabled]:hover {
-  background-color: #007F33;
+  background-color: #6A9319;
 }
 
 .govuk-button--disabled:active,
 .govuk-button[disabled="disabled"]:active,
 .govuk-button[disabled]:active {
-  -webkit-box-shadow: 0 2px 0 #003D15;
-  box-shadow: 0 2px 0 #003D15;
+  -webkit-box-shadow: 0 2px 0 #354B0B;
+  box-shadow: 0 2px 0 #354B0B;
 }
 
 .govuk-button--secondary {
   background-color: #F5F5F5;
   -webkit-box-shadow: 0 2px 0 #929191;
   box-shadow: 0 2px 0 #929191;
+  border-radius: 4px;
 }
 
 .govuk-button--secondary:hover {
@@ -286,14 +307,14 @@
   background-color: #F5F5F5;
 }
 
-/* Warning button - keep red for accessibility but align shadow */
 .govuk-button--warning {
   background-color: #D4351C;
+  border-radius: 4px;
 }
 
-/* Start button icon colour */
 .govuk-button--start {
-  background-color: #007F33;
+  background-color: #6A9319;
+  border-radius: 4px;
 }
 
 
@@ -302,12 +323,12 @@
    ========================================================================== */
 
 .govuk-tag {
-  background-color: #007F33;
+  background-color: #6A9319;
 }
 
 .govuk-tag--grey {
   background-color: #F5F5F5;
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
@@ -316,7 +337,7 @@
    ========================================================================== */
 
 .govuk-phase-banner__content__tag {
-  background-color: #007F33;
+  background-color: #6A9319;
 }
 
 
@@ -325,32 +346,32 @@
    ========================================================================== */
 
 .govuk-notification-banner {
-  border-color: #007F33;
+  border-color: #6A9319;
 }
 
 .govuk-notification-banner__header {
-  background-color: #007F33;
+  background-color: #6A9319;
 }
 
 .govuk-notification-banner--success {
-  border-color: #007F33;
+  border-color: #6A9319;
 }
 
 .govuk-notification-banner--success .govuk-notification-banner__header {
-  background-color: #007F33;
+  background-color: #6A9319;
 }
 
 .govuk-notification-banner__link:link,
 .govuk-notification-banner__link:visited {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-notification-banner__link:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-notification-banner__link:focus {
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
@@ -359,7 +380,7 @@
    ========================================================================== */
 
 .govuk-panel--confirmation {
-  background: #007F33;
+  background: #6A9319;
 }
 
 
@@ -368,23 +389,23 @@
    ========================================================================== */
 
 .govuk-accordion__section-button:hover {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-accordion__section-header {
-  border-top-color: #CCCCCC;
+  border-top-color: #D5D5D5;
 }
 
 .govuk-accordion__open-all {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-accordion__open-all:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-accordion__open-all:focus {
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
@@ -394,16 +415,16 @@
 
 .govuk-tabs__tab:link,
 .govuk-tabs__tab:visited {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-tabs__tab:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-tabs__list-item--selected .govuk-tabs__tab:link,
 .govuk-tabs__list-item--selected .govuk-tabs__tab:visited {
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
@@ -412,13 +433,13 @@
    ========================================================================== */
 
 .govuk-details__summary:hover {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-details__summary:focus {
   outline: 3px solid #FFB81C;
   background-color: #FFB81C;
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
@@ -427,11 +448,11 @@
    ========================================================================== */
 
 .govuk-breadcrumbs__link:link {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-breadcrumbs__link:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-breadcrumbs__link:visited {
@@ -441,7 +462,7 @@
 .govuk-breadcrumbs__link:focus {
   outline: 3px solid #FFB81C;
   background-color: #FFB81C;
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
@@ -450,11 +471,11 @@
    ========================================================================== */
 
 .govuk-back-link:link {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-back-link:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-back-link:visited {
@@ -464,13 +485,12 @@
 .govuk-back-link:focus {
   outline: 3px solid #FFB81C;
   background-color: #FFB81C;
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 
 /* ==========================================================================
-   ERROR STYLING
-   Keep red for accessibility, but update focus ring
+   ERROR STYLING — keep red for accessibility
    ========================================================================== */
 
 .govuk-error-summary {
@@ -489,7 +509,7 @@
 .govuk-error-summary__list a:focus {
   outline: 3px solid #FFB81C;
   background-color: #FFB81C;
-  color: #1A1A1A;
+  color: #1D1D1B;
 }
 
 .govuk-form-group--error {
@@ -508,21 +528,21 @@
    ========================================================================== */
 
 .govuk-summary-list__row {
-  border-bottom-color: #CCCCCC;
+  border-bottom-color: #D5D5D5;
 }
 
 .govuk-summary-list__actions a:link,
 .govuk-summary-list__actions a:visited {
-  color: #007F33;
+  color: #6A9319;
 }
 
 .govuk-summary-list__actions a:hover {
-  color: #005C27;
+  color: #4D6D10;
 }
 
 .govuk-table__header,
 .govuk-table__cell {
-  border-bottom-color: #CCCCCC;
+  border-bottom-color: #D5D5D5;
 }
 
 
@@ -531,7 +551,7 @@
    ========================================================================== */
 
 .govuk-inset-text {
-  border-left-color: #CCCCCC;
+  border-left-color: #6A9319;
 }
 
 
@@ -540,7 +560,27 @@
    ========================================================================== */
 
 .govuk-warning-text__icon {
-  border-color: #1A1A1A;
+  border-color: #1D1D1B;
+}
+
+
+/* ==========================================================================
+   FORM INPUTS — slightly rounded for modern utility feel
+   ========================================================================== */
+
+.govuk-input,
+.govuk-textarea,
+.govuk-select {
+  border-radius: 3px;
+}
+
+
+/* ==========================================================================
+   COOKIE BANNER
+   ========================================================================== */
+
+.govuk-cookie-banner {
+  background-color: #F5F5F5;
 }
 
 
@@ -550,13 +590,13 @@
 
 .slds-button_neutral,
 .slds-button--neutral {
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-family: "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 button.slds-button.slds-button--neutral.ok.uiButton--default.uiButton--brand.uiButton {
-  background-color: #007F33;
+  background-color: #6A9319;
 }
 
 .slds-progress-bar__value {
-  background-color: #007F33;
+  background-color: #6A9319;
 }

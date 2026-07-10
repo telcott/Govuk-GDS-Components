@@ -2,7 +2,7 @@
  * Component Name: Gov UK Header
  * Derived_From_Frontend_Version:v3.13.1
  * Created by: Simon Cook Updated by Neetesh Jain/Brenda Campbell Jakub Szelagowski
- * Updated: Scottish Power branding
+ * Updated: SP Energy Networks branding
  **/
 import {LightningElement, api, track} from 'lwc';
 import {NavigationMixin} from "lightning/navigation";
@@ -15,7 +15,7 @@ export default class GovHeader extends NavigationMixin(LightningElement) {
     @api headerBannerRole = ''; // deprecated
     @api displayMenu;
 
-    @api headerLabel = "ScottishPower";
+    @api headerLabel = "SP Energy Networks";
     @api headerURL = "#";
     @api serviceName = "Service Name";
     @api serviceURL = "#";
